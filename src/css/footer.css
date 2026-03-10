@@ -1,0 +1,129 @@
+/* --- CONTAINER PRINCIPAL DO FOOTER --- */
+.app-footer {
+  background-color: var(--cor-texto-principal); /* Fundo escuro (Preto suave) */
+  color: #ffffff;
+  padding-top: 60px;
+  width: 100%;
+}
+
+/* --- GRID DE CONTEÚDO --- */
+.footer-container {
+  display: grid;
+  /* Cria colunas automáticas. Mínimo 200px, máximo 1 fração do espaço */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+
+  /* Régua de alinhamento padrão */
+  padding: 0 var(--padding-lateral);
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* --- ESTILO DAS COLUNAS --- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Títulos das colunas */
+.footer-col h4 {
+  font-size: 1.1rem;
+  color: var(--cor-primaria-verde); /* Destaque verde */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Coluna da Marca (Logo + Texto) */
+.brand-col p {
+  color: #b0b0b0; /* Cinza claro para leitura em fundo escuro */
+  line-height: 1.6;
+  font-size: 0.95rem;
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  /* Filtro para deixar o logo branco ou preto */
+  /* 1 - branco, 0 - preto */
+  filter: brightness(1) invert(0);
+}
+
+/* --- LINKS --- */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #b0b0b0;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--cor-primaria-verde);
+  padding-left: 5px; /* Efeito de movimento leve */
+}
+
+/* --- REDES SOCIAIS --- */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--cor-primaria-verde);
+  transform: translateY(-3px);
+}
+
+.social-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- BARRA DE COPYRIGHT --- */
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px var(--padding-lateral); /* Alinhamento lateral */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2); /* Um pouco mais escuro que o footer */
+}
+
+.footer-copyright p {
+  color: #808080;
+  font-size: 0.85rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .footer-container {
+    /* No celular, força 1 coluna para a marca e 2 para links */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center; /* Centraliza itens */
+  }
+
+  .brand-col p {
+    margin: 0 auto; /* Centraliza texto da descrição */
+  }
+}

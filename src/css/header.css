@@ -1,0 +1,81 @@
+/* --- HEADER FLUTUANTE --- */
+.app-header {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  max-width: var(--largura-maxima);
+
+  background-color: var(--cor-fundo-claro);
+  border-radius: 50px;
+  padding: 10px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* --- LOGO --- */
+.logo-area a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--cor-texto-escuro);
+  letter-spacing: 0.5px;
+}
+
+.text-cyan {
+  color: var(--cor-cyan-logo);
+}
+
+/* --- NAVEGAÇÃO --- */
+.nav-list {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-link {
+  color: var(--cor-texto-escuro);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--cor-azul-principal);
+}
+
+/* --- RESPONSIVIDADE CELULAR (MOBILE) --- */
+@media (max-width: 768px) {
+  .app-header {
+    width: 95%; /* Largura menor */
+    padding: 10px 20px; /* Padding menor */
+    top: 15px; /* Puxa o header para cima */
+    justify-content: center; /* Centraliza a logo */
+    /* to do: criar um botão de menu hamburguer */
+  }
+
+  .nav-list {
+    display: none; /* Esconde o menu de links para limpar a tela */
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Logo um pouco menor */
+  }
+}

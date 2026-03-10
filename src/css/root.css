@@ -1,0 +1,45 @@
+:root {
+  /* --- PALETA DE CORES --- */
+  --cor-azul-principal: #2385c4;
+  --cor-laranja-principal: #f48c06;
+  --cor-vermelho-botao: #ff473a;
+  --cor-cyan-logo: #00bcd4;
+
+  --cor-fundo-claro: #ffffff;
+  --cor-texto-escuro: #1a1a1a;
+  --cor-texto-claro: #ffffff;
+
+  /* --- RÉGUA DE ALINHAMENTO --- */
+  --padding-lateral: 5%;
+  --largura-maxima: 1400px;
+
+  /* Fonte Poppins (Mais gordinha/moderna) */
+  /* to do: trocar por poppins */
+  --font-main: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- CLASSE DE CONTAINER --- */
+.container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+}

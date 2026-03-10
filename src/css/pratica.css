@@ -1,0 +1,173 @@
+/* --- SECÇÃO PRÁTICA --- */
+.pratica-section {
+  background-color: var(--cor-laranja-principal);
+  padding: 100px var(--padding-lateral);
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Garante que as formas flutuantes não passem para fora */
+}
+
+/* Título Grande Branco */
+.section-title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--cor-texto-claro);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2; /* Fica acima das formas 3D */
+}
+
+/* --- ESTRUTURA DOS CARTÕES --- */
+.pratica-grid-top {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.pratica-grid-bottom {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- ESTILO DOS CARTÕES (Sombra Sólida / Brutalista) --- */
+.brutal-card {
+  background-color: var(--cor-fundo-claro);
+  border-radius: 15px;
+  padding: 35px 40px;
+  /* A "Sombra Sólida" preta como no seu design */
+  box-shadow: 12px 12px 0px 0px #000000;
+  border: 2px solid #000000; /* Borda preta opcional, fica bem com a sombra */
+}
+
+/* Tamanhos dos cartões na grid inferior */
+.card-large {
+  flex: 2; /* Ocupa 2/3 do espaço */
+}
+
+.card-small {
+  flex: 1; /* Ocupa 1/3 do espaço */
+}
+
+/* --- TIPOGRAFIA DENTRO DOS CARTÕES --- */
+.brutal-card p {
+  color: var(--cor-texto-escuro);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-small h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--cor-texto-escuro);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-small p {
+  font-size: 1.1rem;
+}
+
+/* --- FORMAS 3D FLUTUANTES (Posicionamento Baseado na sua imagem) --- */
+.forma-3d {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: float-shapes 6s ease-in-out infinite;
+}
+
+/* Linha com cone e quadrado no topo direito */
+.pr-forma-1 {
+  top: 65px;
+  right: 10%;
+  width: 500px;
+  transform: rotate(5deg);
+}
+
+/* Meia lua verde na direita do cartão do topo */
+.pr-forma-2 {
+  top: 290px;
+  right: 12%;
+  width: 100px;
+  transform: rotate(-15deg);
+  z-index: 5;
+}
+
+/* Triângulo azul em baixo ao centro */
+.pr-forma-3 {
+  bottom: 78px;
+  left: 54%;
+  width: 150px;
+  transform: rotate(-10deg);
+  z-index: 5;
+}
+
+/* Rolo amarelo no canto inferior esquerdo */
+.pr-forma-4 {
+  bottom: 70px;
+  left: 12%;
+  width: 100px;
+  transform: rotate(25deg);
+  z-index: 5;
+}
+
+/* Pilha de livros com maçã no canto inferior direito */
+.pr-forma-5 {
+  bottom: -20px;
+  right: 5%;
+  width: 180px;
+}
+
+/* Animação suave para as formas */
+@keyframes float-shapes {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* --- RESPONSIVIDADE (Tablets e Telemóveis) --- */
+@media (max-width: 1024px) {
+  .pratica-grid-bottom {
+    flex-direction: column; /* Empilha os cartões de baixo */
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pratica-section {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .brutal-card {
+    padding: 25px 20px;
+    box-shadow: 8px 8px 0px 0px #000000; /* Reduz a sombra no telemóvel */
+  }
+
+  .brutal-card p {
+    font-size: 1.1rem;
+  }
+
+  /* Esconde as formas 3D no telemóvel para não atrapalhar a leitura */
+  .forma-3d {
+    display: none;
+  }
+}

@@ -1,0 +1,164 @@
+/* --- SECÇÃO HERO --- */
+.hero-section {
+  background-color: var(--cor-azul-principal);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Corta a imagem se ela sair muito do ecrã */
+  padding: 120px var(--padding-lateral) 60px var(--padding-lateral);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Crucial para o posicionamento da imagem */
+}
+
+/* --- LADO DIREITO --- */
+.hero-image {
+  position: absolute;
+  /*ponto de ajuste: Aqui é ruim de calibrar*/
+  right: -5%; /* Encosta a imagem à direita (ajuste este valor para a puxar mais para fora ou para dentro) */
+  top: -250px; /* PUXA A IMAGEM PARA CIMA, PARA TRÁS DO MENU!*/
+
+  width: 65%;
+  max-width: 900px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1; /* Nível 1: Fica atrás do texto e atrás do menu */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* --- LADO ESQUERDO --- */
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  z-index: 2;
+  position: relative; /* Necessário para o z-index funcionar */
+
+  /* Adiciona um leve sombreado ao texto para garantir leitura caso sobreponha a imagem 3D */
+  text-shadow: 0px 4px 15px rgba(27, 115, 242, 0.5);
+}
+
+.hero-content h1 {
+  font-size: 4rem; /* Título ligeiramente maior */
+  color: var(--cor-texto-claro);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 1.1rem; /* Texto também maior */
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  font-weight: 600;
+  text-transform: uppercase;
+  max-width: 90%; /* Deixa o parágrafo respirar dentro do contentor de 800px */
+}
+
+/* --- BOTÃO VERMELHO --- */
+.btn-red {
+  display: inline-block;
+  background-color: var(--cor-vermelho-botao);
+  color: var(--cor-texto-claro);
+  padding: 16px 45px;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  width: fit-content;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  margin-top: 15px;
+
+  /* Tira o sombreado do texto para o botão */
+  text-shadow: none;
+}
+
+.btn-red:hover {
+  transform: translateY(-4px);
+  background-color: #e53935;
+}
+
+/* --- ANIMAÇÃO DE FLUTUAR --- */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* --- RESPONSIVIDADE (Tablets) --- */
+@media (max-width: 1024px) {
+  .hero-container {
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  /* No tablet, a imagem fica como "marca de água" gigante atrás do texto centrado */
+  .hero-image {
+    width: 90%;
+    right: 5%;
+    top: 10%;
+    opacity: 0.3; /* Transparente para deixar ler o texto */
+  }
+}
+
+/* --- RESPONSIVIDADE (Telemóvel) --- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 130px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    right: 0;
+    top: 20%;
+    opacity: 0.2; /* Ainda mais transparente no telemóvel */
+  }
+}
