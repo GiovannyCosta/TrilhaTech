@@ -1,129 +1,227 @@
-/* --- CONTAINER PRINCIPAL DO FOOTER --- */
-.app-footer {
-  background-color: var(--cor-texto-principal); /* Fundo escuro (Preto suave) */
-  color: #ffffff;
-  padding-top: 60px;
+/* --- BANNER DIVISOR (Branco) --- */
+.bf-forma-1 {
+  position: absolute;
+  bottom: -100px;
+  right: -22%;
+  width: 200px;
+  z-index: 1;
+  animation: none;
+}
+.banner-footer {
+  background-color: var(--cor-fundo-claro);
   width: 100%;
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.banner-icons-wrapper {
+  z-index: 2;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.banner-icons-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- FOOTER PRINCIPAL (Laranja) --- */
+.app-footer {
+  background-color: var(--cor-laranja-principal);
+  padding-top: 80px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Formas flutuantes no Footer Laranja */
+.ft-forma-1 {
+  bottom: 10%;
+  left: 5%;
+  width: 120px;
+  transform: rotate(30deg);
+  z-index: 1;
+}
+.ft-forma-2 {
+  bottom: 10%;
+  right: 5%;
+  width: 130px;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+.ft-forma-3 {
+  top: 50%;
+  left: 40%;
+  width: 90px;
+  transform: rotate(15deg);
+  z-index: 1;
+}
+.ft-forma-4 {
+  top: 10%;
+  right: 10%;
+  width: 140px;
+  transform: rotate(10deg);
+  z-index: 1;
 }
 
 /* --- GRID DE CONTEÚDO --- */
 .footer-container {
   display: grid;
-  /* Cria colunas automáticas. Mínimo 200px, máximo 1 fração do espaço */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* A coluna da marca é maior, as outras dividem o espaço */
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
-
-  /* Régua de alinhamento padrão */
   padding: 0 var(--padding-lateral);
   max-width: var(--largura-maxima);
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 2; /* Fica acima das formas */
 }
 
 /* --- ESTILO DAS COLUNAS --- */
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-/* Títulos das colunas */
 .footer-col h4 {
-  font-size: 1.1rem;
-  color: var(--cor-primaria-verde); /* Destaque verde */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--cor-texto-escuro); /* Preto */
+  font-weight: 500;
 }
 
-/* Coluna da Marca (Logo + Texto) */
-.brand-col p {
-  color: #b0b0b0; /* Cinza claro para leitura em fundo escuro */
-  line-height: 1.6;
-  font-size: 0.95rem;
-  max-width: 300px;
+/* Coluna da Marca */
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .footer-logo {
-  width: 120px;
+  width: 50px; /* Tamanho da logo hexagonal */
   height: auto;
-  /* Filtro para deixar o logo branco ou preto */
-  /* 1 - branco, 0 - preto */
-  filter: brightness(1) invert(0);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--cor-texto-escuro);
+}
+
+.text-normal {
+  font-weight: 400; /* 'Tech' mais fino como no print */
+}
+
+.brand-col p {
+  color: var(--cor-texto-escuro);
+  line-height: 1.5;
+  font-size: 1rem;
+  max-width: 300px;
+  font-weight: 400;
 }
 
 /* --- LINKS --- */
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  color: #b0b0b0;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-  color: var(--cor-primaria-verde);
-  padding-left: 5px; /* Efeito de movimento leve */
-}
-
-/* --- REDES SOCIAIS --- */
-.social-icons {
-  display: flex;
   gap: 15px;
 }
 
-.social-btn {
+.footer-links a {
+  color: var(--cor-texto-escuro);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 400;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.3s ease;
+  gap: 8px;
 }
 
-.social-btn:hover {
-  background-color: var(--cor-primaria-verde);
-  transform: translateY(-3px);
+.footer-links a:hover {
+  font-weight: 700; /* Engrossa a fonte no hover em vez de mudar a cor */
 }
 
-.social-btn .icon {
+.social-icon {
+  color: var(--cor-texto-escuro);
   width: 20px;
   height: 20px;
 }
 
-/* --- BARRA DE COPYRIGHT --- */
-.footer-copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px var(--padding-lateral); /* Alinhamento lateral */
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.2); /* Um pouco mais escuro que o footer */
+/* --- CAIXA DE COPYRIGHT BRANCA (Estilo Brutalista) --- */
+.footer-copyright-wrapper {
+  padding: 0 var(--padding-lateral) 60px var(--padding-lateral);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
-.footer-copyright p {
-  color: #808080;
-  font-size: 0.85rem;
+.footer-copyright-box {
+  background-color: var(--cor-fundo-claro);
+  border: 3px solid #000000;
+  border-radius: 15px;
+  padding: 20px 40px;
+  box-shadow: 10px 10px 0px 0px #000000; /* Sombra preta dura */
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.footer-copyright-box p {
+  color: var(--cor-texto-escuro);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer-container {
-    /* No celular, força 1 coluna para a marca e 2 para links */
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr; /* 2 colunas no tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-footer {
+    padding: 40px 0;
+  }
+
+  .forma-3d {
+    transform: scale(0.5) !important;
+    opacity: 0.5;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* 1 coluna no telemóvel */
     text-align: center;
   }
 
   .footer-col {
-    align-items: center; /* Centraliza itens */
+    align-items: center;
+  }
+  .footer-logo-link {
+    justify-content: center;
+  }
+  .brand-col p {
+    margin: 0 auto;
   }
 
-  .brand-col p {
-    margin: 0 auto; /* Centraliza texto da descrição */
+  .footer-copyright-box {
+    padding: 15px 20px;
+    box-shadow: 6px 6px 0px 0px #000000;
   }
 }
