@@ -16,9 +16,9 @@ nosso projeto é voltado principalmente para jovens que desejam iniciar nas area
 
 - RF02 - Glossário Técnico: O sistema deve exibir um dicionário de termos técnicos (acervo) com explicações simples. (Era: "ter acervo de palavras tech")
 
-- RF03 - Gerenciar Perfil: O sistema deve permitir que o usuário crie uma conta, faça login e edite seus dados. (Era: "ter perfil único" e "poder mudar perfil")
+- RF03 - Gerenciar Perfil: O sistema deve permitir que o usuário crie uma conta, faça login e edite seus dados. (Era: "ter perfil único" e "poder mudar perfil") : REMOVIDO
 
-- RF04 - Sistema de Progresso (Gamificação): O sistema deve registrar quais módulos o usuário já leu e atribuir pontuação/conquistas. (Era: "ter gamificação")
+- RF04 - Sistema de Progresso (Gamificação): O sistema deve registrar quais módulos o usuário já leu e atribuir pontuação/conquistas. (Era: "ter gamificação") : NÃO INCLUIDO
 
 - RF05 - Conteúdo Educativo: O sistema deve apresentar textos explicativos diferenciando Hardware de Software e desmistificando a área. (Era: "mostrar claramente a diferença...")
 

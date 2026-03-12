@@ -139,7 +139,7 @@
   }
 }
 
-/* --- RESPONSIVIDADE (Telemóvel) --- */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
   .hero-section {
     padding-top: 130px;
