@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="./src/css/root.css">
     <link rel="stylesheet" href="./src/css/header.css">
@@ -60,12 +65,12 @@
         </main>
         <!-- fim do main -->
 
-        <!-- cards -->
+
+        <!-- pratica -->
         <section class="pratica-section">
+
             <img src="./src/icons/icon-line.png" alt="" class="forma-3d pr-forma-1">
-            <img src="./src/icons/icon-half.png" alt="" class="forma-3d pr-forma-2">
-            <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d pr-forma-3">
-            <img src="./src/icons/icon-half-circle.png" alt="" class="forma-3d pr-forma-4">
+
             <img src="./src/icons/icon-book.png" alt="" class="forma-3d pr-forma-5">
 
             <div class="container">
@@ -75,14 +80,21 @@
                     <div class="brutal-card card-full">
                         <p>O TrilhaTech busca promover um guia acessível para a tecnologia, desde o digital de ponta até
                             o que está ao alcance das mãos.</p>
+
+                        <img src="./src/icons/icon-half.png" alt="" class="forma-3d pr-forma-2">
                     </div>
                 </div>
 
                 <div class="pratica-grid-bottom">
+
                     <div class="brutal-card card-large">
                         <p>Por meio de guias simples e práticos, desenvolvemos o protagonismo dos jovens,
                             incentivando-os a se apropriar e utilizar diferentes ferramentas em uma nova realidade, onde
                             a tecnologia se torna um dos principais pilares da sociedade.</p>
+
+                        <img src="./src/icons/icon-half-circle.png" alt="" class="forma-3d pr-forma-4">
+
+                        <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d pr-forma-3">
                     </div>
 
                     <div class="brutal-card card-small">
@@ -90,15 +102,15 @@
                         <p>O TrilhaTech orienta jovens no universo da tecnologia, apresentando carreiras, linguagens e
                             ferramentas que fortalecem seu protagonismo no mundo digital.</p>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
         <!-- fim do pratica -->
 
         <!-- conexoes -->
         <section id="conexoes" class="conexoes-section">
-            <img src="./src/icons/icon-half-circle.png" alt="" class="forma-3d cx-forma-1">
+            <img src="./src/icons/icon-half-circle.png" alt="ícone de circulo" class="forma-3d cx-forma-1">
             <img src="./src/icons/icon-cone.png" alt="" class="forma-3d cx-forma-2">
             <img src="./src/icons/icon-half.png" alt="" class="forma-3d cx-forma-3">
             <div class="container">
@@ -134,13 +146,48 @@
                 </div>
             </div>
         </section>
-        <!-- footer -->
+        <!-- fim do conexoes -->
+
+        <!-- banner -->
+        <section class="banner-footer">
+            <div class="container banner-container">
+                <img src="./src/icons/icon-box.png" alt="Caixa com ícones" class=" bf-forma-1">
+
+                <div class="banner-icons-wrapper">
+                    <img src="./src/img/banner-icons.png" alt="ícones geometricos">
+                </div>
+            </div>
+        </section>
+
         <footer class="app-footer">
+            <img src="./src/icons/icon-cone.png" alt="" class="forma-3d ft-forma-1">
+            <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d ft-forma-2">
+            <img src="./src/icons/icon-ring.png" alt="" class="forma-3d ft-forma-3">
+
             <div class="footer-container">
 
                 <div class="footer-col brand-col">
-                    <img src="./src/img/logo-trilha-white.png" alt="Logo Trilha Tech" class="footer-logo">
-                    <p>Sua bússola no mundo da tecnologia. Desmistificando a TI para quem está começando do zero.</p>
+                    <a href="#" class="footer-logo-link">
+                        <img src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech" class="footer-logo">
+                        <span class="logo-text">Trilha<span class="text-normal">Tech</span></span>
+                    </a>
+                    <p>Sua bússola no mundo da tecnologia.<br>Desmistificando a TI para quem está começando do zero.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>feito com 🩷</h4>
+                    <ul class="footer-links social-links">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram social-icon"></i> @gio.env
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram social-icon"> </i> @neilson.gag
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
@@ -149,7 +196,6 @@
                         <li><a href="#">Carreiras</a></li>
                         <li><a href="#">Roadmap</a></li>
                         <li><a href="#">Glossário</a></li>
-                        <li><a href="#">Fundamentos</a></li>
                     </ul>
                 </div>
 
@@ -162,44 +208,16 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
-                    <h4>Conecte-se</h4>
-                    <div class="social-icons">
-                        <a href="#" class="social-btn">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-btn">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-btn">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
             </div>
 
-            <div class="footer-copyright">
-                <p>&copy; 2026 Trilha Tech. Todos os direitos reservados.</p>
+            <div class="footer-copyright-wrapper">
+                <div class="footer-copyright-box">
+                    <p>&copy; 2026 TRILHA TECH. TODOS OS DIREITOS RESERVADOS.</p>
+                </div>
             </div>
         </footer>
-        <!-- fim footer -->
+
+
     </div>
     </div>
 </body>
