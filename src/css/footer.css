@@ -1,4 +1,10 @@
 /* --- BANNER DIVISOR (Branco) --- */
+.footer-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .bf-forma-1 {
   position: absolute;
   bottom: -100px;
@@ -197,8 +203,9 @@
 
 @media (max-width: 768px) {
   .bf-forma-1 {
-    right: -20px;
-    width: 150px;
+    right: 0px;
+    width: 160px;
+    bottom: -40px;
   }
   .banner-footer {
     padding: 40px 0;
