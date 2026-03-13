@@ -203,9 +203,7 @@
 
 @media (max-width: 768px) {
   .bf-forma-1 {
-    right: 0px;
-    width: 160px;
-    bottom: -40px;
+    display: none;
   }
   .banner-footer {
     padding: 40px 0;
