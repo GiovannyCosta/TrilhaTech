@@ -199,11 +199,45 @@
   .footer-container {
     grid-template-columns: 1fr 1fr; /* 2 colunas no tablet */
   }
+  .bf-forma-1 {
+    right: -50px;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 768px) {
   .bf-forma-1 {
+    right: -50px;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     display: none;
+  }
+  .banner-icons-wrapper {
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    .banner-icons-wrapper {
+      max-width: 600px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner-icons-wrapper {
+      max-width: 400px;
+    }
+  }
+
+  .banner-icons-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   .banner-footer {
     padding: 40px 0;
