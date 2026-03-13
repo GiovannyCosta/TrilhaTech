@@ -1,4 +1,18 @@
 /* --- BANNER DIVISOR (Branco) --- */
+.footer-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.banner-footer {
+  background-color: var(--cor-fundo-claro);
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+}
+
 .bf-forma-1 {
   position: absolute;
   bottom: -100px;
@@ -7,13 +21,6 @@
   z-index: 1;
   animation: none;
 }
-.banner-footer {
-  background-color: var(--cor-fundo-claro);
-  width: 100%;
-  padding: 60px 0;
-  position: relative;
-  z-index: 1;
-}
 
 .banner-container {
   position: relative;
@@ -21,6 +28,10 @@
   justify-content: center;
   align-items: center;
   min-height: 150px;
+  z-index: 2;
+  background-image: url("../icons/icon-box.png");
+  background-repeat: no-repeat;
+  background-position: right -60px top 100px;
 }
 
 .banner-icons-wrapper {
@@ -28,6 +39,7 @@
   width: 100%;
   max-width: 800px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 .banner-icons-wrapper img {
@@ -79,15 +91,15 @@
 /* --- GRID DE CONTEÚDO --- */
 .footer-container {
   display: grid;
-  /* A coluna da marca é maior, as outras dividem o espaço */
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  /* Ajustado para 3 colunas (a primeira é maior) */
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
   padding: 0 var(--padding-lateral);
   max-width: var(--largura-maxima);
   margin: 0 auto;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   position: relative;
-  z-index: 2; /* Fica acima das formas */
+  z-index: 2;
 }
 
 /* --- ESTILO DAS COLUNAS --- */
@@ -99,21 +111,27 @@
 
 .footer-col h4 {
   font-size: 1.2rem;
-  color: var(--cor-texto-escuro); /* Preto */
+  color: var(--cor-texto-escuro);
   font-weight: 500;
 }
 
-/* Coluna da Marca */
+/* --- ESTILOS DA COLUNA DA MARCA --- */
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
 .footer-logo-link {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 5px;
   text-decoration: none;
 }
 
 .footer-logo {
-  width: 50px; /* Tamanho da logo hexagonal */
+  width: 50px;
   height: auto;
 }
 
@@ -124,15 +142,57 @@
 }
 
 .text-normal {
-  font-weight: 400; /* 'Tech' mais fino como no print */
+  font-weight: 400;
 }
 
 .brand-col p {
   color: var(--cor-texto-escuro);
   line-height: 1.5;
   font-size: 1rem;
-  max-width: 300px;
+  max-width: 400px;
   font-weight: 400;
+}
+
+/* --- ÁREA DOS AUTORES (@gio.env / @nelson.gag) --- */
+.author-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copy-text-love {
+  font-weight: 800;
+  color: var(--cor-texto-escuro);
+  font-size: 0.95rem;
+}
+
+.copy-center {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.author-tag {
+  background-color: var(--cor-arghata); /* Cor ARGHATA */
+  color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px 0px #000000;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.author-tag:hover {
+  transform: translateY(-2px) translateX(-2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+  background-color: var(--cor-laranja-principal);
 }
 
 /* --- LINKS --- */
@@ -147,22 +207,17 @@
   transition: all 0.3s ease;
   font-size: 1rem;
   font-weight: 400;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .footer-links a:hover {
-  font-weight: 700; /* Engrossa a fonte no hover em vez de mudar a cor */
+  font-weight: 700;
 }
 
-.social-icon {
-  color: var(--cor-texto-escuro);
-  width: 20px;
-  height: 20px;
-}
-
-/* --- CAIXA DE COPYRIGHT BRANCA (Estilo Brutalista) --- */
+/* --- CAIXA DE COPYRIGHT BRANCA (Lado a Lado) --- */
 .footer-copyright-wrapper {
   padding: 0 var(--padding-lateral) 60px var(--padding-lateral);
   display: flex;
@@ -175,23 +230,54 @@
   background-color: var(--cor-fundo-claro);
   border: 3px solid #000000;
   border-radius: 15px;
-  padding: 20px 40px;
-  box-shadow: 10px 10px 0px 0px #000000; /* Sombra preta dura */
+  padding: 15px 30px;
+  box-shadow: 10px 10px 0px 0px #000000;
   width: 100%;
   max-width: 900px;
-  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.footer-copyright-box p {
+.copy-left p {
   color: var(--cor-texto-escuro);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
+  margin: 0;
+}
+
+/* Badge Designed by Arghata */
+.ai-badge {
+  background-color: var(--cor-arghata); /* Cor ARGHATA */
+  color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 1024px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr; /* 2 colunas no tablet */
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-row {
+    align-items: center;
+  }
+  .author-wrapper {
+    justify-content: center;
   }
 }
 
@@ -200,22 +286,33 @@
     padding: 40px 0;
   }
 
+  .banner-container {
+    /* Mantive a sua correção do mobile aqui! */
+    background-position: right -60px top 50px;
+  }
+
   .forma-3d {
     transform: scale(0.5) !important;
     opacity: 0.5;
   }
 
   .footer-container {
-    grid-template-columns: 1fr; /* 1 coluna no telemóvel */
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
   .footer-col {
     align-items: center;
   }
+
+  .footer-links {
+    align-items: center;
+  }
+
   .footer-logo-link {
     justify-content: center;
   }
+
   .brand-col p {
     margin: 0 auto;
   }
@@ -223,5 +320,9 @@
   .footer-copyright-box {
     padding: 15px 20px;
     box-shadow: 6px 6px 0px 0px #000000;
+    /* Ajustes para empilhar o texto e o badge no celular */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }
