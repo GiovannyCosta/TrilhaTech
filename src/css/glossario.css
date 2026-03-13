@@ -1,0 +1,205 @@
+/* --- HERO GLOSSÁRIO --- */
+.glossario-hero {
+  background-color: var(--cor-arghata); /* Cor roxa da paleta */
+  padding: 150px var(--padding-lateral) 60px var(--padding-lateral);
+  position: relative;
+  overflow: hidden;
+  background-image: url("../icons/icon-box.png");
+  background-repeat: no-repeat;
+  background-position: right -60px bottom -40px;
+}
+
+.hero-glossario-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.glossario-header-text {
+  flex: 1;
+  max-width: 700px;
+}
+
+.glossario-header-text h1 {
+  font-size: 3.5rem;
+  color: var(--cor-texto-claro);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 0px #000000;
+}
+
+.text-highlight {
+  color: var(--cor-cyan-logo);
+}
+
+.glossario-header-text p {
+  font-size: 1.2rem;
+  color: var(--cor-texto-claro);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.glossario-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+.glossario-hero-img img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* --- BARRA DE PESQUISA --- */
+.glossario-filtros {
+  padding: 60px var(--padding-lateral) 30px var(--padding-lateral);
+  background-color: var(--cor-fundo-claro);
+}
+
+.brutal-card-flat {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 8px 8px 0px 0px #000000;
+  border-radius: 15px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-box-container i {
+  font-size: 1.5rem;
+  color: var(--cor-texto-escuro);
+}
+
+.search-box-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: var(--font-main);
+  color: var(--cor-texto-escuro);
+  font-weight: 600;
+  background: transparent;
+}
+
+.search-box-container input::placeholder {
+  color: #888;
+  font-weight: 500;
+}
+
+.btn-limpar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--cor-vermelho-botao);
+}
+
+/* --- FILTRO POR ALFABETO --- */
+.alfabeto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-letra {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--cor-texto-escuro);
+}
+
+.btn-letra:hover,
+.btn-letra.active {
+  background-color: var(--cor-laranja-principal);
+  transform: translateY(-2px) translateX(-2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+/* --- RESULTADOS --- */
+.glossario-resultados {
+  padding: 0 var(--padding-lateral) 80px var(--padding-lateral);
+  background-color: var(--cor-fundo-claro);
+  min-height: 40vh;
+}
+
+.glossario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.glossario-card {
+  background-color: #eef2f6;
+  border: 2px solid #000000;
+  box-shadow: 8px 8px 0px 0px #000000;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.2s ease;
+}
+
+.glossario-card:hover {
+  transform: translateY(-5px);
+}
+
+.glossario-card h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--cor-azul-principal);
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 5px;
+}
+
+.glossario-card p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--cor-texto-escuro);
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  border: 3px dashed #000000;
+  border-radius: 15px;
+  background-color: #fff9f9;
+}
+
+.no-results h3 {
+  font-size: 1.8rem;
+  color: var(--cor-vermelho-botao);
+  margin-bottom: 10px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .hero-glossario-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .glossario-header-text h1 {
+    font-size: 2.5rem;
+  }
+  .glossario-hero-img img {
+    max-width: 150px;
+  }
+  .btn-letra {
+    width: 35px;
+    height: 35px;
+  }
+}

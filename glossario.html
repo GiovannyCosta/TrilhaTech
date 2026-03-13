@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/glossario.css">
+
+    <title>Glossário Tech | Trilha Tech</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <a href="./index.html">
+                    <img class="logo-img" src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech">
+                    <span class="logo-text">TRILHA<span class="text-cyan">TECH</span></span>
+                </a>
+            </div>
+            <nav class="top-nav">
+                <ul class="nav-list">
+                    <li><a href="./index.html" class="nav-link">HOME</a></li>
+                    <li><a href="./glossario.html" class="nav-link"
+                            style="color: var(--cor-azul-principal);">GLOSSÁRIO</a></li>
+                    <li><a href="#" class="nav-link">QUEM SOMOS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="glossario-hero">
+                <div class="container hero-glossario-container">
+                    <div class="glossario-header-text">
+                        <h1>DICIONÁRIO <span class="text-highlight">TECH</span></h1>
+                        <p>A tecnologia tem seu próprio idioma. Aqui você encontra as palavras mais usadas na área de TI
+                            traduzidas de forma simples e direta para você não boiar nas conversas.</p>
+                    </div>
+                    <div class="glossario-hero-img">
+                    </div>
+                </div>
+            </section>
+
+            <section class="glossario-filtros">
+                <div class="container">
+                    <div class="search-box-container brutal-card-flat">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" placeholder="Busque por um termo tech (ex: Back-end)...">
+                        <button id="clearSearchBtn" class="btn-limpar" style="display: none;"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <div class="alfabeto-container" id="alfabetoContainer">
+                    </div>
+                </div>
+            </section>
+
+            <section class="glossario-resultados">
+                <div class="container">
+                    <div id="noResultsMessage" class="no-results" style="display: none;">
+                        <h3>Nenhum termo encontrado! 😢</h3>
+                        <p>Tente buscar por outra palavra ou limpe os filtros.</p>
+                    </div>
+
+                    <div class="glossario-grid" id="glossarioGrid">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./src/js/glossario.js"></script>
+</body>
+
+</html>
