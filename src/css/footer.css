@@ -196,6 +196,10 @@
 }
 
 @media (max-width: 768px) {
+  .bf-forma-1 {
+    right: -20px;
+    width: 150px;
+  }
   .banner-footer {
     padding: 40px 0;
   }
@@ -206,7 +210,7 @@
   }
 
   .footer-container {
-    grid-template-columns: 1fr; /* 1 coluna no telemóvel */
+    grid-template-columns: 1fr;
     text-align: center;
   }
 

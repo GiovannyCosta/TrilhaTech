@@ -159,6 +159,6 @@
     width: 100%;
     right: 0;
     top: 20%;
-    opacity: 0.2; /* Ainda mais transparente no telemóvel */
+    opacity: 0.2; /* Ainda mais transparente no tablet/mobile */
   }
 }
