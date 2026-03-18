@@ -22,7 +22,12 @@
 
 <body>
     <div class="app-container">
-        <header class="app-header">
+
+        <!-- botão para voltar ao topo -->
+        <div class="topUp">
+            <button onclick="toUP()" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+        <header class="app-header header-glossario">
             <div class="logo-area">
                 <a href="./index.html">
                     <img class="logo-img" src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech">
@@ -80,7 +85,8 @@
         </main>
     </div>
 
-    <script src="./src/js/glossario.js"></script>
+    <script defer src="./src/js/glossario.js"></script>
+    <script src="./src/js/scrollbar.js"></script>
 </body>
 
 </html>

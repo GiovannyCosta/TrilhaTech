@@ -9,6 +9,7 @@
   --cor-texto-escuro: #1a1a1a;
   --cor-texto-claro: #ffffff;
   --cor-arghata: #8a2be2;
+  --cor-hover-arghata: #7d2be2;
   /* --- RÉGUA DE ALINHAMENTO --- */
   --padding-lateral: 5%;
   --largura-maxima: 1400px;
@@ -42,4 +43,26 @@ html {
   width: 100%;
   max-width: var(--largura-maxima);
   margin: 0 auto;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--cor-arghata);
+  color: var(--cor-texto-claro);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+#topBtn:hover {
+  background-color: var(--cor-hover-arghata);
+  transition: all 0.2s ease-in-out;
 }
