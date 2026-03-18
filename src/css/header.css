@@ -64,18 +64,35 @@
 /* --- RESPONSIVIDADE CELULAR (MOBILE) --- */
 @media (max-width: 768px) {
   .app-header {
-    width: 95%; /* Largura menor */
-    padding: 10px 20px; /* Padding menor */
-    top: 15px; /* Puxa o header para cima */
-    justify-content: center; /* Centraliza a logo */
-    /* to do: criar um botão de menu hamburguer */
+    width: 95%;
+    top: 15px;
+    border-radius: 30px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a logo e os links */
+    height: 100px;
   }
 
+  /* Garante que o menu apareça */
   .nav-list {
-    display: none; /* Esconde o menu de links para limpar a tela */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.7rem; 
   }
 
   .logo-text {
-    font-size: 1.2rem; /* Logo um pouco menor */
+    font-size: 1rem; 
+  }
+
+  .logo-img {
+    height: 50px; 
   }
 }
