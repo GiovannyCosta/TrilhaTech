@@ -45,6 +45,11 @@ html {
   margin: 0 auto;
 }
 
+/* Fixa o cabeçalho */
+.fix-header {
+  position: fixed !important;
+}
+
 #topBtn {
   display: none;
   position: fixed;

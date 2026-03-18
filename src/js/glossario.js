@@ -1,6 +1,6 @@
 /* == Módulo Glossário == */
 const GlossarioApp = (function () {
-  // 1. DADOS DO GLOSSÁRIO (Didáticos e simples)
+  // Dicionário de termos tecnicos
   const dicionario = [
     {
       termo: "API",
@@ -86,7 +86,7 @@ const GlossarioApp = (function () {
   let filtroAtual = "";
   let letraAtual = "";
 
-  // 2. FUNÇÕES DE RENDERIZAÇÃO
+  // FUNÇÕES DE RENDERIZAÇÃO
   function renderizarGrid(dados) {
     gridResultados.innerHTML = "";
 
@@ -133,7 +133,7 @@ const GlossarioApp = (function () {
     });
   }
 
-  // 3. FUNÇÕES DE FILTRAGEM E LÓGICA
+  // FUNÇÕES DE FILTRAGEM E LÓGICA
   function processarFiltros() {
     let dadosFiltrados = dicionario;
 
@@ -191,7 +191,7 @@ const GlossarioApp = (function () {
     processarFiltros();
   }
 
-  // 4. INICIALIZAÇÃO E EVENTOS
+  // INICIALIZAÇÃO E EVENTOS
   function init() {
     // Captura os elementos DOM
     gridResultados = document.getElementById("glossarioGrid");

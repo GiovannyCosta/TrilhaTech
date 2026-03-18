@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carreiras em Tecnologia | TrilhaTech</title>
-    <!-- CSS principal do projeto -->
+    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./src/css/root.css">
     <link rel="stylesheet" href="./src/css/header.css">
-    <link rel="stylesheet" href="./src/css/about.css">
-    <link rel="stylesheet" href="./src/css/pratica.css">
     <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/carreiras.css"> 
     <link rel="stylesheet" href="./src/css/glossario.css">
-    <link rel="stylesheet" href="./src/css/hero.css">
+    <link rel="stylesheet" href="./src/css/carreiras.css">
+
+    <title>Carreiras em Tecnologia | TrilhaTech</title>
 </head>
+
 <body>
     <div class="app-container">
-        <header class="app-header">
+        <div class="topUp">
+            <button onclick="toUP()" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+
+        <header class="app-header fix-header">
             <div class="logo-area">
                 <a href="./index.html">
                     <img class="logo-img" src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech">
@@ -25,134 +37,72 @@
             </div>
             <nav class="top-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">HOME</a></li>
-                    <li><a href="glossario.html" class="nav-link">GLOSSÁRIO</a></li>
-                    <li><a href="carreiras.html" class="nav-link active">CARREIRAS</a></li>
-                    <li><a href="about.html" class="nav-link">QUEM SOMOS</a></li>
+                    <li><a href="./index.html" class="nav-link">HOME</a></li>
+                    <li><a href="./glossario.html" class="nav-link">GLOSSÁRIO</a></li>
+                    <li><a href="./carreiras.html" class="nav-link"
+                            style="color: var(--cor-azul-principal);">CARREIRAS</a></li>
+                    <li><a href="#" class="nav-link">QUEM SOMOS</a></li>
                 </ul>
             </nav>
         </header>
+
         <main>
             <section class="glossario-hero hero-carreiras">
                 <div class="container hero-glossario-container">
                     <div class="glossario-header-text">
-                        <h1>PRINCIPAIS CARREIRAS  <span class="text-highlight">TECH</span></h1>
-                        <p>O mercado de tecnologia é amplo e oferece oportunidades para diferentes perfis, dos mais lógicos aos mais criativos. Escolher uma trilha é apenas o primeiro passo em uma jornada de aprendizado contínuo e evolução profissional.</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="carreiras-intro-section">
-                    <div class="carreiras-intro-container">
-                        <div class="carreiras-intro-text">
-                            <h2 class="carreiras-intro-title">A tecnologia está em tudo ao nosso redor</h2>
-                            <p class="carreiras-intro-desc">
-                                Do celular que você usa até os sistemas que movimentam empresas inteiras. Mas por trás de cada aplicativo, site ou sistema, existe um processo organizado e profissionais com funções bem definidas.<br><br>
-                                <strong>Pense na tecnologia como a construção de uma casa:</strong>
-                            </p>
-                            <ul class="carreiras-intro-list">
-                                <li>🧠 Alguém planeja a solução (entende o problema)</li>
-                                <li>🎨 Alguém cria a aparência e experiência (o que você vê e usa)</li>
-                                <li>⚙️ Alguém faz tudo funcionar por trás (dados, segurança, regras)</li>
-                                <li>🌐 Alguém garante que tudo esteja conectado (internet, servidores)</li>
-                            </ul>
-                            <p class="carreiras-intro-desc">
-                                Ou seja, tecnologia não é só “programar”. É um ecossistema completo de soluções, onde cada área tem um papel importante.<br><br>
-                                Hoje, o mercado busca pessoas que saibam resolver problemas reais, não apenas escrever código. E a melhor parte: você pode começar do zero e evoluir passo a passo.<br><br>
-                                <span class="carreiras-intro-call" > É exatamente isso que você vai entender nas áreas abaixo.</span>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                    <div class="glossario-hero-img">
+                        <h1>PRINCIPAIS CARREIRAS <span class="text-highlight">TECH</span></h1>
+                        <p>O mercado de tecnologia é amplo e oferece oportunidades para diferentes perfis, dos mais
+                            lógicos aos mais criativos. Escolher uma trilha é apenas o primeiro passo em uma jornada de
+                            aprendizado contínuo.</p>
                     </div>
                 </div>
             </section>
-            <section class="carreiras-list-section carreiras-bg-ia">
-                <div class="container carreiras-list-container">
-                    <div class="carreiras-list-grid">
-                        <ul class="carreiras-list">
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721301.png" alt="Front-end" class="carreira-icon">
-                                <a href="#" class="carreira-link">Desenvolvedor Front-end</a>
-                                <p class="carreira-desc">Profissional responsável por criar interfaces visuais e interativas de sites e aplicações, utilizando HTML, CSS, JavaScript e frameworks modernos.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721304.png" alt="Back-end" class="carreira-icon">
-                                <a href="#" class="carreira-link">Desenvolvedor Back-end</a>
-                                <p class="carreira-desc">Cuida da lógica, banco de dados e regras de negócio por trás das aplicações, garantindo que tudo funcione corretamente no servidor.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721311.png" alt="Full Stack" class="carreira-icon">
-                                <a href="#" class="carreira-link">Desenvolvedor Full Stack</a>
-                                <p class="carreira-desc">Atua tanto no front-end quanto no back-end, desenvolvendo aplicações completas e integrando todas as camadas do sistema.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Engenheiro de Dados" class="carreira-icon">
-                                <a href="#" class="carreira-link">Engenheiro de Dados</a>
-                                <p class="carreira-desc">Especialista em projetar, construir e manter sistemas de coleta, armazenamento e processamento de grandes volumes de dados.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721300.png" alt="Cientista de Dados" class="carreira-icon">
-                                <a href="#" class="carreira-link">Cientista de Dados</a>
-                                <p class="carreira-desc">Analisa dados complexos para extrair insights e apoiar decisões, utilizando estatística, programação e inteligência artificial.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721300.png" alt="Analista de Dados" class="carreira-icon">
-                                <a href="#" class="carreira-link">Analista de Dados</a>
-                                <p class="carreira-desc">Transforma dados em informações úteis para o negócio, criando relatórios, dashboards e análises para apoiar estratégias.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721298.png" alt="DevOps" class="carreira-icon">
-                                <a href="#" class="carreira-link">DevOps Engineer</a>
-                                <p class="carreira-desc">Integra desenvolvimento e operações, automatizando processos de deploy, monitoramento e infraestrutura para maior agilidade e qualidade.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721303.png" alt="Engenheiro de Software" class="carreira-icon">
-                                <a href="#" class="carreira-link">Engenheiro de Software</a>
-                                <p class="carreira-desc">Projeta, desenvolve e mantém sistemas e aplicações de software, aplicando boas práticas de engenharia e arquitetura.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721305.png" alt="Arquiteto de Soluções" class="carreira-icon">
-                                <a href="#" class="carreira-link">Arquiteto de Soluções</a>
-                                <p class="carreira-desc">Define a estrutura técnica de sistemas, escolhendo tecnologias e integrando componentes para atender às necessidades do negócio.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721306.png" alt="Product Manager" class="carreira-icon">
-                                <a href="#" class="carreira-link">Product Manager (PM)</a>
-                                <p class="carreira-desc">Responsável por planejar, priorizar e guiar o desenvolvimento de produtos digitais, alinhando as necessidades do usuário e do negócio.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721307.png" alt="UX/UI Designer" class="carreira-icon">
-                                <a href="#" class="carreira-link">UX/UI Designer</a>
-                                <p class="carreira-desc">Foca na experiência e na interface do usuário, criando soluções visuais intuitivas, acessíveis e agradáveis para produtos digitais.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721308.png" alt="QA/Testador de Software" class="carreira-icon">
-                                <a href="#" class="carreira-link">QA/Testador de Software</a>
-                                <p class="carreira-desc">Garante a qualidade dos sistemas, planejando e executando testes para identificar e corrigir falhas antes da entrega ao usuário.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721309.png" alt="Administrador de Banco de Dados" class="carreira-icon">
-                                <a href="#" class="carreira-link">Administrador de Banco de Dados (DBA)</a>
-                                <p class="carreira-desc">Gerencia bancos de dados, garantindo segurança, desempenho, integridade e disponibilidade das informações.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721310.png" alt="Especialista em Segurança da Informação" class="carreira-icon">
-                                <a href="#" class="carreira-link">Especialista em Segurança da Informação</a>
-                                <p class="carreira-desc">Protege sistemas e dados contra ameaças, implementando políticas, ferramentas e práticas de segurança digital.</p>
-                            </li>
-                            <li class="carreira-item">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2721/2721302.png" alt="Analista de Suporte Técnico" class="carreira-icon">
-                                <a href="#" class="carreira-link">Analista de Suporte Técnico</a>
-                                <p class="carreira-desc">Atende usuários e resolve problemas técnicos, garantindo o funcionamento adequado de sistemas, redes e equipamentos.</p>
-                            </li>
-                        </ul>
+
+            <section class="carreiras-intro-section">
+                <div class="container">
+                    <h2 class="carreiras-intro-title">A tecnologia está em tudo ao nosso redor</h2>
+                    <p class="carreiras-intro-desc">
+                        Por trás de cada aplicativo, existe um ecossistema completo e profissionais com funções bem
+                        definidas. Pense na tecnologia como a construção de uma casa:
+                    </p>
+                    <ul class="carreiras-intro-list">
+                        <li>🧠 <strong>Planejamento:</strong> Entender o problema e organizar a solução.</li>
+                        <li>🎨 <strong>Experiência:</strong> Criar o visual, o que você vê e usa na tela.</li>
+                        <li>⚙️ <strong>Engrenagens:</strong> Fazer tudo funcionar por trás (dados, regras, segurança).
+                        </li>
+                        <li>🌐 <strong>Infraestrutura:</strong> Garantir que tudo fique online, rápido e seguro.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="glossario-filtros">
+                <div class="container">
+                    <div class="search-box-container brutal-card-flat">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput"
+                            placeholder="Busque por uma carreira (ex: Dados, Front-end)...">
+                        <button id="clearSearchBtn" class="btn-limpar" style="display: none;"><i
+                                class="fa-solid fa-xmark"></i></button>
                     </div>
+
+                    <div class="alfabeto-container" id="categoriasContainer"></div>
+                </div>
+            </section>
+
+            <section class="glossario-resultados">
+                <div class="container">
+                    <div id="noResultsMessage" class="no-results" style="display: none;">
+                        <h3>Nenhuma carreira encontrada! 😢</h3>
+                        <p>Tente buscar por outro termo ou limpe os filtros.</p>
+                    </div>
+
+                    <div class="glossario-grid" id="carreirasGrid"></div>
                 </div>
             </section>
         </main>
-       
-       
-    </div>
+
+        <script defer src="./src/js/carreiras.js"></script>
+        <script src="./src/js/scrollbar.js"></script>
 </body>
+
 </html>

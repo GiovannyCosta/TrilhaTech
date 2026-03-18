@@ -1,220 +1,120 @@
-/* --- INTRO CARREIRAS --- */
+/* --- SECÇÃO CARREIRAS --- */
+
+.hero-carreiras {
+  background-color: var(--cor-laranja-principal);
+  background-image: url("../img/icon-card-2.png");
+  background-repeat: no-repeat;
+  background-position: right -60px bottom -40px;
+  background-size: 200px;
+}
+
+/* --- INTRODUÇÃO --- */
 .carreiras-intro-section {
-  background: var(--cor-azul-principal);
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden; /* Corta a imagem se ela sair muito do ecrã */
-  padding: 60px var(--padding-lateral) 60px var(--padding-lateral);
-  
+  background-color: var(--cor-fundo-claro);
+  padding: 80px var(--padding-lateral) 0 var(--padding-lateral);
 }
-.carreiras-intro-container {
-  width: 100%;
-}
-.carreiras-intro-text {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+
 .carreiras-intro-title {
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: var(--cor-fundo-claro);
-  margin-bottom: 12px;
-  letter-spacing: 1px;
   font-size: 2.5rem;
-  color: var(--cor-texto-claro);
   font-weight: 900;
-  line-height: 1.1;
+  color: var(--cor-texto-escuro);
   text-transform: uppercase;
-  margin-bottom: 20px;
-  text-shadow: 4px 4px 0px #000000;
+  margin-bottom: 10px;
 }
+
 .carreiras-intro-desc {
-  font-size: 1.18rem;
-  color: var(--cor-fundo-claro);
-  font-weight: 250;
-  line-height: 1.7;
-  margin-bottom: 8px;
+  font-size: 1.15rem;
+  color: var(--cor-texto-escuro);
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 900px;
 }
+
 .carreiras-intro-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 12px 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.carreiras-intro-list li {
-  font-size: 1.13rem;
-  font-weight: 400;
-  background: #eef2f6;
-  border-radius:12px;
-  padding: 12px 18px;
-  box-shadow: 4px 4px 0px #2385c433;
-  color: var(--cor-azul-principal);
-  display: flex;
-  align-items: center;
-  border: 1.5px solid #dbeafe;
-}
-.carreiras-intro-call {
-  font-size: 1.22rem;
-  font-weight: 800;
-  color: var(--cor-texto-claro);
-  margin-top: 10px;
-}
-@media (max-width: 700px) {
-  .carreiras-intro-section {
-    padding: 16px 4px;
-    margin: 18px 0 24px 0;
-    box-shadow: 3px 3px 0px #000;
-  }
-  .carreiras-intro-title {
-    font-size: 1.18rem;
-  }
-  .carreiras-intro-list li {
-    font-size: 0.98rem;
-    padding: 6px 10px;
-    border-radius: 6px;
-  }
-}
-/* --- HERO DA PÁGINA CARREIRAS --- */
-
-.hero-carreiras {
-    background-color:var(--cor-laranja-principal) !important;
-}
-
-/* --- LISTA DE CARREIRAS --- */
-.carreiras-list-section {
-  background-color: var(--cor-azul-principal);
-  padding: 60px 0 100px 0;
-}
-.carreiras-bg-ia {
-  background: linear-gradient(180deg, var(--cor-fundo-claro) );
-  position: relative;
-}
-.carreiras-list-container {
+  margin: 25px 0;
   max-width: 900px;
-  margin: 0 auto;
 }
-.carreiras-list-grid {
-  
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 40px;
+
+.carreiras-intro-list li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: var(--cor-texto-escuro);
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0px #000;
 }
-.carreiras-list {
-  display: contents;
+
+/* --- CARREIRAS --- */
+.carreiras-section {
+  background-color: var(--cor-fundo-claro);
+  padding: 80px var(--padding-lateral) 0 var(--padding-lateral);
 }
-.carreira-item {
-  background: #eef2f6;
-  border-radius: 18px;
-  box-shadow: 8px 8px 0px #000;
-  border: 2.5px solid #000;
-  padding: 32px 36px;
+.carreira-card {
+  background-color: #eef2f6;
+  border: 2px solid #000000;
+  box-shadow: 8px 8px 0px 0px #000000;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.2s ease;
+
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: flex-start;
-  transition: box-shadow 0.2s, transform 0.2s;
 }
-.carreira-item:hover {
-  box-shadow: 14px 14px 0px #000;
-  transform: translateY(-4px) scale(1.02);
+
+.carreira-card:hover {
+  transform: translateY(-5px);
 }
+
 .carreira-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 8px;
-  border-radius: 10px;
-  background: #f4f8fb;
-  box-shadow: 2px 2px 8px #dbeafe33;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
   object-fit: contain;
 }
-.carreira-link {
-  font-size: 1.5rem;
-  font-weight: 800;
+
+.carreira-card h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
   color: var(--cor-azul-principal);
-  text-decoration: none;
-  margin-bottom: 6px;
-  transition: color 0.2s;
-}
-.carreira-link:hover {
-  color: var(--cor-laranja-principal);
-}
-.carreira-desc {
-  color: var(--cor-texto-escuro);
-  font-size: 1.08rem;
-  line-height: 1.6;
-  font-weight: 500;
-  margin: 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
-/* --- FOOTER EXCLUSIVO CARREIRAS --- */
-.carreiras-footer {
-  background: #22223b;
-  color: #fff;
-  padding-top: 60px;
-  margin-top: 60px;
+.carreira-card p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--cor-texto-escuro);
+  font-weight: 500;
+  margin-bottom: 15px;
 }
-.carreiras-footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 5% 30px 5%;
-}
-.footer-brand p, .footer-column ul, .footer-newsletter, .footer-bottom p {
-  color: #e0e0e0;
-}
-.footer-newsletter {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.newsletter-form {
-  display: flex;
-  gap: 8px;
-}
-.newsletter-form input[type="email"] {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-}
-.newsletter-form button {
-  background: var(--cor-laranja-principal);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.newsletter-form button:hover {
-  background: #d97706;
-}
-.footer-bottom {
-  text-align: center;
-  padding: 18px 0 0 0;
-  font-size: 0.98rem;
-  color: #bdbdbd;
+
+/* Tag de categoria */
+.categoria-tag {
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--cor-texto-claro);
+  background: var(--cor-arghata);
+  padding: 5px 12px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 700px) {
-  .carreiras-title { font-size: 2.1rem; }
-  .carreiras-list-container { padding: 0 10px; }
-  .carreira-item { padding: 20px 12px; }
-  .carreiras-footer-container { grid-template-columns: 1fr; gap: 24px; }
-}
-@media (max-width: 900px) {
-  .carreiras-list-grid {
-    grid-template-columns: 1fr;
-    gap: 28px 0;
+@media (max-width: 768px) {
+  .carreiras-intro-title {
+    font-size: 2rem;
+  }
+  .carreiras-intro-list li {
+    font-size: 0.95rem;
   }
 }

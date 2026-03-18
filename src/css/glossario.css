@@ -1,9 +1,4 @@
 /* --- HERO GLOSSÁRIO --- */
-/* Fixa o cabeçalho */
-.header-glossario {
-  position: fixed;
-}
-
 .glossario-hero {
   background-color: var(--cor-arghata); /* Cor roxa da paleta */
   padding: 150px var(--padding-lateral) 60px var(--padding-lateral);
@@ -13,8 +8,6 @@
   background-repeat: no-repeat;
   background-position: right -60px bottom -40px;
 }
-
-
 
 .hero-glossario-container {
   display: flex;
