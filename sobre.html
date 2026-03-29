@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/glossario.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/pratica.css">
+    <link rel="stylesheet" href="./src/css/sobre.css">
+
+    <title>Sobre Nós | Trilha Tech</title>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="topUp">
+            <button onclick="toUP()" id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+
+        <header class="app-header fix-header">
+            <div class="logo-area">
+                <a href="./index.html">
+                    <img class="logo-img" src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech">
+                    <span class="logo-text">TRILHA<span class="text-cyan">TECH</span></span>
+                </a>
+            </div>
+            <nav class="top-nav">
+                <ul class="nav-list">
+                    <li><a href="./index.html" class="nav-link">HOME</a></li>
+                    <li><a href="./glossario.html" class="nav-link">GLOSSÁRIO</a></li>
+                    <li><a href="./carreiras.html" class="nav-link">CARREIRAS</a></li>
+                    <li><a href="./sobre.html" style="color: var(--cor-azul-principal);" class="nav-link">SOBRE</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="glossario-hero">
+                <div class="container hero-glossario-container">
+                    <div class="glossario-header-text">
+                        <h1>Quem Somos:</h1>
+                        <p>Um grupo de estudantes de tecnologia que acredita no poder do conhecimento para abrir
+                            caminhos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pratica-section">
+                <h2 class="section-title sobre-title">SOBRE O PROJETO</h2>
+                <img src="./src/icons/icon-line.png" alt="" class="forma-3d pr-forma-1">
+                <img src="./src/icons/icon-book.png" alt="" class="forma-3d pr-forma-5">
+
+                <div class="container">
+
+                    <div class="pratica-grid-bottom" style="margin-bottom: 60px;">
+
+                        <div class="brutal-card card-large">
+                            <p>O TrilhaTech nasceu da iniciativa de estudantes do curso de Análise e Desenvolvimento de
+                                Sistemas (ADS) que desejam aproximar jovens do universo da tecnologia.</p>
+                            <br>
+                            <p>Percebemos que muitos estudantes têm interesse pela área, mas não sabem por onde começar
+                                ou quais áreas podem seguir. Por isso, criamos um espaço que apresenta carreiras,
+                                linguagens e ferramentas digitais de forma simples e acessível.</p>
+                            <img src="./src/icons/icon-half.png" alt="" class="forma-3d pr-forma-2">
+                        </div>
+
+                        <div class="brutal-card card-small card-small-wd">
+                            <h3>TRILHATECH</h3>
+                            <p>Nosso objetivo é ajudar jovens a entender melhor o mundo da tecnologia e descobrir
+                                caminhos possíveis dentro desse universo.</p>
+                            <img src="./src/icons/icon-half-circle.png" alt="" class="forma-3d pr-forma-4">
+                            <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d pr-forma-3">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="equipe-section">
+                <div class="container">
+                    <h2 class="section-title sobre-title-equipe">Quem constrói o projeto</h2>
+
+                    <div class="team-intro-container">
+                        <div class="brutal-card card-full" style="background-color: var(--cor-fundo-claro);">
+                            <p>O projeto é desenvolvido por estudantes de Análise e Desenvolvimento de Sistemas (ADS),
+                                que aplicam na prática conhecimentos de programação, design e desenvolvimento web.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-profiles-grid">
+
+                        <div class="team-card-profile">
+                            <div class="profile-header">
+                                <img src="./src/public/Logo-trilha-tech (5).png" alt="Gio" class="profile-img">
+                                <h3 class="profile-name">GIO.ENV</h3>
+                                <p class="profile-role">Fullstack Dev & AI Engineer</p>
+                            </div>
+
+                            <div class="profile-stack-area">
+                                <span class="stack-label">STACK</span>
+                                <div class="stack-badges">
+                                    <span class="badge-tech">HTML</span>
+                                    <span class="badge-tech">CSS</span>
+                                    <span class="badge-tech">JS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-card-profile">
+                            <div class="profile-header">
+                                <img src="./src/public/Logo-trilha-tech (4).png" alt="Nelson" class="profile-img">
+                                <h3 class="profile-name">NELSON.GAG</h3>
+                                <p class="profile-role">UI/UX Designer & Dev</p>
+                            </div>
+
+                            <div class="profile-stack-area">
+                                <span class="stack-label">STACK</span>
+                                <div class="stack-badges badge-fr">
+                                    <span class="badge-tech">FIGMA</span>
+                                    <span class="badge-tech">HTML</span>
+                                    <span class="badge-tech">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card-profile">
+                            <div class="profile-header">
+                                <img src="./src/public/Logo-trilha-tech (3).png" alt="Nelson" class="profile-img">
+                                <h3 class="profile-name">Eduardo Maia</h3>
+                                <p class="profile-role">Planejamento & Dev</p>
+                            </div>
+
+                            <div class="profile-stack-area">
+                                <span class="stack-label">STACK</span>
+                                <div class="stack-badges">
+                                    <span class="badge-tech">FIGMA</span>
+                                    <span class="badge-tech">HTML</span>
+                                    <span class="badge-tech">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- banner -->
+        <section class="footer-wrapper">
+            <div class="banner-footer banner-container">
+                <div class="container ">
+                    <div class="banner-icons-wrapper">
+                        <img src="./src/img/banner-icons.png" alt="ícones geometricos">
+                    </div>
+                </div>
+            </div>
+
+            <footer class="app-footer">
+                <img src="./src/icons/icon-cone.png" alt="" class="forma-3d ft-forma-1">
+                <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d ft-forma-2">
+                <img src="./src/icons/icon-ring.png" alt="" class="forma-3d ft-forma-3">
+
+                <div class="footer-container">
+
+                    <div class="footer-col brand-col">
+                        <div class="footer-row">
+                            <a href="#" class="footer-logo-link">
+                                <img src="./src/img/logo-trilha-black.png" alt="Logo Trilha Tech" class="footer-logo">
+                                <span class="logo-text">Trilha<span class="text-normal">Tech</span></span>
+                            </a>
+
+                            <div class="author-wrapper">
+                                <span class="copy-text-love">— FEITO COM 🩷</span>
+                                <div class="copy-center">
+                                    <a href="https://www.instagram.com/gio.env/" class="author-tag"
+                                        target="_blank">@gio.env</a>
+                                    <a href="#" class="author-tag" target="_blank">@nelson</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Sua bússola no mundo da tecnologia.<br>Desmistificando a TI para quem está começando do zero.
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Carreiras</a></li>
+                            <li><a href="#">Roadmap</a></li>
+                            <li><a href="#">Glossário</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Projeto</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-copyright-wrapper">
+                    <div class="footer-copyright-box">
+                        <div class="copy-left">
+                            <p>© 2026 TrilhaTech. Todos os direitos reservados.</p>
+                        </div>
+                        <div class="copy-right">
+                            <div class="ai-badge">DESIGNED BY ARGHATA</div>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </section>
+        <!-- fim  do footer -->
+
+    </div>
+    <script src="./src/js/scrollbar.js"></script>
+</body>
+
+</html>
