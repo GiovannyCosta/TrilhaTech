@@ -120,10 +120,9 @@
 }
 .card-small-wd {
   position: relative;
-  bottom: 32px;
-  width: 100px;
-  height: 260px;
-  object-fit: cover;
+  bottom: 32px; /* Mantém o efeito de subir um pouco no desktop */
+  width: 100%; /* Deixa o flexbox decidir a largura ou ocupa 100% do espaço disponível */
+  min-height: 260px; /* Usa min-height para garantir o tamanho, mas permite crescer se o texto precisar */
   border: 4px solid #000000;
 }
 
@@ -166,5 +165,9 @@
 
   .equipe-section {
     padding: 60px 0;
+  }
+  .card-small-wd {
+    bottom: 0; /* Anula o salto para cima, evitando que sobreponha o cartão de cima ao empilhar */
+    min-height: auto; /* Deixa a altura ser apenas o necessário para o conteúdo */
   }
 }
