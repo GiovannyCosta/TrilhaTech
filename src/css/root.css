@@ -81,14 +81,16 @@ input {
 
 .loader-card {
   display: grid;
-  gap: clamp(18px, 4vw, 30px);
   place-items: center;
 }
 
 .loader-logo-stack {
-  position: relative;
-  width: clamp(86px, 18vw, 132px);
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 4;
+  width: clamp(92px, 18vw, 136px);
   aspect-ratio: 1;
+  transform: translate(-50%, -50%);
 }
 
 .loader-logo {
@@ -115,25 +117,6 @@ input {
   inset: 0;
   filter: url("#loader-goo-filter");
   animation: rotate-move 2s ease-in-out infinite;
-}
-
-.loader-t {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  display: grid;
-  place-items: center;
-  color: var(--cor-fundo-claro);
-  font-size: clamp(3rem, 9vw, 4.8rem);
-  font-weight: 900;
-  line-height: 1;
-  text-shadow:
-    2px 2px 0 var(--cor-borda),
-    -2px 2px 0 var(--cor-borda),
-    2px -2px 0 var(--cor-borda),
-    -2px -2px 0 var(--cor-borda);
-  transform: rotate(0deg);
-  animation: loader-t-counter 2s ease-in-out infinite;
 }
 
 .loader-dot {
@@ -269,16 +252,6 @@ input {
   80%,
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes loader-t-counter {
-  55% {
-    transform: rotate(0deg);
-  }
-  80%,
-  100% {
-    transform: rotate(-360deg);
   }
 }
 

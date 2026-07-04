@@ -30,16 +30,15 @@ const TrilhaTechUI = (function () {
     loader.setAttribute("aria-label", "Carregando Trilha Tech");
     loader.innerHTML = `
       <div class="loader-card">
-        <div class="loader-logo-stack">
-          <img class="loader-logo loader-logo-black" src="./src/img/logo-trilha-black.png" alt="">
-          <img class="loader-logo loader-logo-white" src="./src/img/logo-trilha-white.png" alt="">
-        </div>
         <div class="loader-goo" aria-hidden="true">
-          <div class="loader-t">T</div>
           <div class="loader-goo-dots">
             <div class="loader-dot loader-dot-1"></div>
             <div class="loader-dot loader-dot-2"></div>
             <div class="loader-dot loader-dot-3"></div>
+          </div>
+          <div class="loader-logo-stack">
+            <img class="loader-logo loader-logo-black" src="./src/img/logo-trilha-black.png" alt="">
+            <img class="loader-logo loader-logo-white" src="./src/img/logo-trilha-white.png" alt="">
           </div>
         </div>
         <svg class="loader-filter" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
