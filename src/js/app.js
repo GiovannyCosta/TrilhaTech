@@ -34,11 +34,26 @@ const TrilhaTechUI = (function () {
           <img class="loader-logo loader-logo-black" src="./src/img/logo-trilha-black.png" alt="">
           <img class="loader-logo loader-logo-white" src="./src/img/logo-trilha-white.png" alt="">
         </div>
-        <div class="loader-word" aria-hidden="true">
-          <span>T</span><span>R</span><span>I</span><span>L</span><span>H</span><span>A</span>
-          <strong class="loader-tech loader-tech-dark">TECH</strong>
-          <strong class="loader-tech loader-tech-light">TECH</strong>
+        <div class="loader-goo" aria-hidden="true">
+          <div class="loader-t">T</div>
+          <div class="loader-goo-dots">
+            <div class="loader-dot loader-dot-1"></div>
+            <div class="loader-dot loader-dot-2"></div>
+            <div class="loader-dot loader-dot-3"></div>
+          </div>
         </div>
+        <svg class="loader-filter" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="loader-goo-filter">
+              <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+              <feColorMatrix
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"
+                mode="matrix"
+                in="blur">
+              </feColorMatrix>
+            </filter>
+          </defs>
+        </svg>
       </div>
     `;
     document.body.prepend(loader);
