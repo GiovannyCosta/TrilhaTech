@@ -24,7 +24,19 @@ const TrilhaTechUI = (function () {
     `;
   }
 
+  function shouldShowLoading() {
+    try {
+      if (sessionStorage.getItem("trilhaTechLoaderShown") === "true") return false;
+      sessionStorage.setItem("trilhaTechLoaderShown", "true");
+      return true;
+    } catch (error) {
+      return true;
+    }
+  }
+
   function renderLoading() {
+    if (!shouldShowLoading()) return;
+
     const loader = document.createElement("div");
     loader.className = "page-loader";
     loader.setAttribute("aria-label", "Carregando Trilha Tech");
