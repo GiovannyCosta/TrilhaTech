@@ -71,7 +71,7 @@ input {
   transition:
     opacity 0.55s ease,
     visibility 0.55s ease;
-  animation: loader-theme 3.2s ease-in-out infinite;
+  animation: loader-theme 4.2s ease-in-out infinite;
 }
 
 .page-loader.is-hidden {
@@ -97,7 +97,7 @@ input {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: loader-logo-swap 3.2s ease-in-out infinite;
+  animation: loader-logo-swap 4.2s ease-in-out infinite;
 }
 
 .loader-logo-white {
@@ -146,7 +146,7 @@ input {
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: loader-tech-type 3.2s steps(4, end) infinite;
+  animation: loader-tech-type 4.2s steps(4, end) infinite;
 }
 
 .loader-tech-dark {

@@ -44,8 +44,8 @@ const TrilhaTechUI = (function () {
     document.body.prepend(loader);
 
     window.addEventListener("load", () => {
-      window.setTimeout(() => loader.classList.add("is-hidden"), 1650);
-      window.setTimeout(() => loader.remove(), 2300);
+      window.setTimeout(() => loader.classList.add("is-hidden"), 4100);
+      window.setTimeout(() => loader.remove(), 4750);
     });
   }
 
