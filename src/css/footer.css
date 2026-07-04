@@ -195,10 +195,7 @@
   width: 86px;
   height: 64px;
   overflow: hidden;
-  border: 2px solid var(--cor-borda);
-  border-radius: 12px;
-  background: #000000;
-  box-shadow: 4px 4px 0 var(--cor-borda);
+  background: transparent;
 }
 
 .arghata-logo img {
