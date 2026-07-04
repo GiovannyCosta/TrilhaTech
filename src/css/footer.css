@@ -1,328 +1,248 @@
-/* --- BANNER DIVISOR (Branco) --- */
 .footer-wrapper {
-  width: 100%;
-  overflow-x: hidden;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner-footer {
-  background-color: var(--cor-fundo-claro);
-  width: 100%;
-  padding: 60px 0;
   position: relative;
   z-index: 2;
-}
-
-.bf-forma-1 {
-  position: absolute;
-  bottom: -100px;
-  right: -22%;
-  width: 200px;
-  z-index: 1;
-  animation: none;
+  width: 100%;
+  padding: clamp(36px, 7vw, 70px) var(--padding-lateral);
+  background-color: var(--cor-fundo-claro);
 }
 
 .banner-container {
-  position: relative;
   display: flex;
-  justify-content: center;
+  min-height: 130px;
   align-items: center;
-  min-height: 150px;
-  z-index: 2;
+  justify-content: center;
   background-image: url("../icons/icon-box.png");
   background-repeat: no-repeat;
-  background-position: right -60px top 100px;
+  background-position: right -60px top 80px;
 }
 
 .banner-icons-wrapper {
-  z-index: 2;
-  width: 100%;
-  max-width: 800px;
-  padding: 0 20px;
+  width: min(100%, 800px);
   margin: 0 auto;
 }
 
-.banner-icons-wrapper img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* --- FOOTER PRINCIPAL (Laranja) --- */
 .app-footer {
-  background-color: var(--cor-laranja-principal);
-  padding-top: 80px;
-  width: 100%;
   position: relative;
-  overflow: hidden;
   z-index: 5;
+  width: 100%;
+  overflow: hidden;
+  padding-top: clamp(56px, 7vw, 80px);
+  background-color: var(--cor-laranja-principal);
 }
 
-/* Formas flutuantes no Footer Laranja */
 .ft-forma-1 {
   bottom: 10%;
   left: 5%;
   width: 120px;
   transform: rotate(30deg);
-  z-index: 1;
 }
+
 .ft-forma-2 {
-  bottom: 10%;
   right: 5%;
+  bottom: 10%;
   width: 130px;
   transform: rotate(-15deg);
-  z-index: 1;
 }
+
 .ft-forma-3 {
-  top: 50%;
-  left: 40%;
+  top: 45%;
+  left: 42%;
   width: 90px;
   transform: rotate(15deg);
-  z-index: 1;
-}
-.ft-forma-4 {
-  top: 10%;
-  right: 10%;
-  width: 140px;
-  transform: rotate(10deg);
-  z-index: 1;
 }
 
-/* --- GRID DE CONTEÚDO --- */
 .footer-container {
-  display: grid;
-  /* Ajustado para 3 colunas (a primeira é maior) */
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  padding: 0 var(--padding-lateral);
-  max-width: var(--largura-maxima);
-  margin: 0 auto;
-  padding-bottom: 50px;
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(160px, 1fr) minmax(160px, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 var(--padding-lateral) 50px;
 }
 
-/* --- ESTILO DAS COLUNAS --- */
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
 }
 
 .footer-col h4 {
-  font-size: 1.2rem;
   color: var(--cor-texto-escuro);
-  font-weight: 500;
-}
-
-/* --- ESTILOS DA COLUNA DA MARCA --- */
-.footer-row {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .footer-logo-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+  width: fit-content;
 }
 
 .footer-logo {
-  width: 50px;
-  height: auto;
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--cor-texto-escuro);
-}
-
-.text-normal {
-  font-weight: 400;
+  height: 50px;
 }
 
 .brand-col p {
+  max-width: 460px;
   color: var(--cor-texto-escuro);
-  line-height: 1.5;
   font-size: 1rem;
-  max-width: 400px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 1.55;
 }
 
-/* --- ÁREA DOS AUTORES (@gio.env / @nelson.gag) --- */
 .author-wrapper {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
+  gap: 12px;
 }
 
 .copy-text-love {
-  font-weight: 800;
   color: var(--cor-texto-escuro);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 900;
 }
 
 .copy-center {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
+}
+
+.author-tag,
+.arghata-logo {
+  border: 2px solid var(--cor-borda);
+  background-color: var(--cor-arghata);
+  color: var(--cor-texto-claro);
+  font-weight: 900;
+  box-shadow: 3px 3px 0 var(--cor-borda);
 }
 
 .author-tag {
-  background-color: var(--cor-arghata); /* Cor ARGHATA */
-  color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 30px;
+  border-radius: 999px;
   padding: 6px 16px;
-  font-weight: 900;
   font-size: 0.85rem;
   text-transform: lowercase;
-  text-decoration: none;
-  box-shadow: 3px 3px 0px 0px #000000;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .author-tag:hover {
-  transform: translateY(-2px) translateX(-2px);
-  box-shadow: 5px 5px 0px 0px #000000;
-  background-color: var(--cor-laranja-principal);
+  background-color: var(--cor-azul-principal);
+  box-shadow: 5px 5px 0 var(--cor-borda);
+  transform: translate(-2px, -2px);
 }
 
-/* --- LINKS --- */
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-links a {
+  display: inline-flex;
+  width: fit-content;
   color: var(--cor-texto-escuro);
-  transition: all 0.3s ease;
   font-size: 1rem;
-  font-weight: 400;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
 }
 
 .footer-links a:hover {
-  font-weight: 700;
+  transform: translateX(4px);
 }
 
-/* --- CAIXA DE COPYRIGHT BRANCA (Lado a Lado) --- */
 .footer-copyright-wrapper {
-  padding: 0 var(--padding-lateral) 60px var(--padding-lateral);
-  display: flex;
-  justify-content: center;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--padding-lateral) clamp(38px, 6vw, 60px);
 }
 
 .footer-copyright-box {
-  background-color: var(--cor-fundo-claro);
-  border: 3px solid #000000;
-  border-radius: 15px;
-  padding: 15px 30px;
-  box-shadow: 10px 10px 0px 0px #000000;
-  width: 100%;
-  max-width: 900px;
-
   display: flex;
-  justify-content: space-between;
+  width: min(100%, 920px);
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px clamp(18px, 4vw, 30px);
+  border: 3px solid var(--cor-borda);
+  border-radius: 15px;
+  background-color: var(--cor-fundo-claro);
+  box-shadow: 10px 10px 0 var(--cor-borda);
 }
 
-.copy-left p {
+.footer-copyright-box p {
   color: var(--cor-texto-escuro);
   font-size: 0.95rem;
-  font-weight: 700;
-  margin: 0;
+  font-weight: 800;
 }
 
-/* Badge Designed by Arghata */
-.ai-badge {
-  background-color: var(--cor-arghata); /* Cor ARGHATA */
-  color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 30px;
-  padding: 8px 18px;
-  font-weight: 900;
+.arghata-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 7px 14px 7px 8px;
+}
+
+.arghata-mark {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 2px solid var(--cor-borda);
+  border-radius: 50%;
+  background: var(--cor-fundo-claro);
+  color: var(--cor-arghata);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.arghata-word {
   font-size: 0.85rem;
-  text-transform: uppercase;
-  box-shadow: 4px 4px 0px 0px #000000;
+  letter-spacing: 0;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-col {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-row {
-    align-items: center;
-  }
-  .author-wrapper {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .banner-footer {
-    padding: 40px 0;
-  }
-
-  .banner-container {
-    /* Mantive a sua correção do mobile aqui! */
-    background-position: right -60px top 50px;
-  }
-
-  .forma-3d {
-    transform: scale(0.5) !important;
-    opacity: 0.5;
-  }
-
+@media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .footer-col {
-    align-items: center;
-  }
-
+  .footer-col,
+  .footer-logo-link,
+  .author-wrapper,
   .footer-links {
     align-items: center;
-  }
-
-  .footer-logo-link {
     justify-content: center;
   }
 
   .brand-col p {
     margin: 0 auto;
   }
+}
+
+@media (max-width: 640px) {
+  .banner-container {
+    min-height: 90px;
+    background-position: right -70px top 40px;
+  }
 
   .footer-copyright-box {
-    padding: 15px 20px;
-    box-shadow: 6px 6px 0px 0px #000000;
-    /* Ajustes para empilhar o texto e o badge no celular */
     flex-direction: column;
-    justify-content: center;
     text-align: center;
+    box-shadow: 6px 6px 0 var(--cor-borda);
   }
 }

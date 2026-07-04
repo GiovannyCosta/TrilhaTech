@@ -1,24 +1,20 @@
-const btn = document.getElementById("topBtn");
-let isScrolling = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("topBtn");
+  if (!btn) return;
 
-window.addEventListener("scroll", () => {
-  // Se já houver uma execução em andamento, aborta
-  if (isScrolling) return;
-  isScrolling = true;
+  let isScrolling = false;
 
-  // Aguarda 150ms antes de rodar a função para evitar um loop
-  setTimeout(() => {
-    if (window.scrollY > 300) {
-      // Mostra o botão
-      btn.style.display = "flex";
-    } else {
-      btn.style.display = "none";
-    }
-    isScrolling = false;
-  }, 150);
+  window.addEventListener("scroll", () => {
+    if (isScrolling) return;
+    isScrolling = true;
+
+    window.setTimeout(() => {
+      btn.style.display = window.scrollY > 300 ? "flex" : "none";
+      isScrolling = false;
+    }, 120);
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
-
-function toUP() {
-  // Faz o scroll suave
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
