@@ -116,8 +116,7 @@
   gap: 10px;
 }
 
-.author-tag,
-.arghata-logo {
+.author-tag {
   border: 2px solid var(--cor-borda);
   background-color: var(--cor-arghata);
   color: var(--cor-texto-claro);
@@ -192,27 +191,21 @@
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 7px 14px 7px 8px;
-}
-
-.arghata-mark {
-  display: grid;
-  width: 28px;
-  height: 28px;
-  place-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 64px;
+  overflow: hidden;
   border: 2px solid var(--cor-borda);
-  border-radius: 50%;
-  background: var(--cor-fundo-claro);
-  color: var(--cor-arghata);
-  font-size: 1rem;
-  line-height: 1;
+  border-radius: 12px;
+  background: #000000;
+  box-shadow: 4px 4px 0 var(--cor-borda);
 }
 
-.arghata-word {
-  font-size: 0.85rem;
-  letter-spacing: 0;
+.arghata-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.75);
 }
 
 @media (max-width: 900px) {

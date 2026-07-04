@@ -171,8 +171,7 @@ const TrilhaTechUI = (function () {
           <div class="footer-copyright-box">
             <p>© 2026 TrilhaTech. Todos os direitos reservados.</p>
             <a class="arghata-logo" href="#" aria-label="Arghata">
-              <span class="arghata-mark">A</span>
-              <span class="arghata-word">ARGHATA</span>
+              <img src="./src/img/arghata.png" alt="Arghata">
             </a>
           </div>
         </div>
