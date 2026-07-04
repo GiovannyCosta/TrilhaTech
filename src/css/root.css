@@ -66,12 +66,11 @@ input {
   z-index: 9999;
   display: grid;
   place-items: center;
-  background: var(--cor-texto-escuro);
-  color: var(--cor-texto-claro);
+  background: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
   transition:
     opacity 0.55s ease,
     visibility 0.55s ease;
-  animation: loader-theme 4.2s ease-in-out infinite;
 }
 
 .page-loader.is-hidden {
@@ -182,19 +181,6 @@ input {
 #topBtn:hover {
   background-color: var(--cor-hover-arghata);
   transform: translateY(-2px);
-}
-
-@keyframes loader-theme {
-  0%,
-  56% {
-    background: var(--cor-texto-claro);
-    color: var(--cor-texto-escuro);
-  }
-  70%,
-  100% {
-    background: var(--cor-texto-escuro);
-    color: var(--cor-texto-claro);
-  }
 }
 
 @keyframes dot-3-move {
