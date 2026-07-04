@@ -1,92 +1,83 @@
-/* == Módulo Glossário == */
 const GlossarioApp = (function () {
-  // Dicionário de termos tecnicos
   const dicionario = [
     {
       termo: "API",
-      def: "Uma ponte invisível que permite que dois sistemas, aplicativos ou sites conversem e troquem dados entre si.",
+      def: "Uma ponte que permite que dois sistemas, aplicativos ou sites conversem e troquem dados entre si.",
     },
     {
       termo: "Algoritmo",
-      def: "Uma receita de bolo para o computador. É um passo a passo de instruções para resolver um problema.",
+      def: "Uma sequência de instruções para resolver um problema, como uma receita que o computador consegue seguir.",
     },
     {
       termo: "Back-end",
-      def: "Os 'bastidores' de um site ou aplicativo. É onde ficam os servidores, banco de dados e as engrenagens que fazem tudo funcionar.",
+      def: "A parte de bastidores de um site ou aplicativo, onde ficam servidores, bancos de dados e regras do sistema.",
     },
     {
       termo: "Bug",
-      def: "Um erro ou falha no código que faz com que um programa se comporte de maneira estranha ou pare de funcionar.",
+      def: "Um erro no código que faz um programa se comportar de forma inesperada ou parar de funcionar.",
     },
     {
       termo: "Cloud",
-      def: "A famosa 'Nuvem'. Significa armazenar arquivos ou rodar sistemas em computadores super potentes na internet, ao invés do seu HD local.",
-    },
-    {
-      termo: "Deploy",
-      def: "O ato de colocar um site, atualização ou aplicativo 'no ar', deixando-o disponível para os usuários finais.",
-    },
-    {
-      termo: "Framework",
-      def: "Uma caixa de ferramentas já prontas que facilita e acelera o trabalho do programador para criar softwares.",
-    },
-    {
-      termo: "Front-end",
-      def: "A parte visual do site ou app, onde o usuário clica e interage. Envolve o design, botões, textos e cores.",
-    },
-    {
-      termo: "Git",
-      def: "Uma ferramenta de 'máquina do tempo'. Ele salva o histórico de todas as alterações feitas no código do projeto.",
-    },
-    {
-      termo: "Hardware",
-      def: "A parte física da tecnologia. Aquilo que você pode chutar ou tocar: teclado, monitor, placa-mãe, memória.",
-    },
-    {
-      termo: "IP",
-      def: "Um número de identificação, como se fosse o endereço postal ou o CPF do seu computador quando ele se conecta à internet.",
-    },
-    {
-      termo: "Open Source",
-      def: "Software de código aberto. Significa que o código do programa é público e qualquer pessoa pode ver, modificar e melhorar.",
-    },
-    {
-      termo: "Software",
-      def: "A parte lógica da tecnologia. Os programas, aplicativos e sistemas operacionais. Aquilo que você só pode 'xingar', mas não tocar.",
-    },
-    {
-      termo: "UI",
-      def: "(User Interface / Interface do Usuário) É a tela, o layout, os botões e a tipografia. O que o usuário enxerga.",
-    },
-    {
-      termo: "UX",
-      def: "(User Experience / Experiência do Usuário) É como o usuário se sente ao usar o sistema. Se a navegação foi fácil, fluida ou frustrante.",
+      def: "A nuvem: serviços e arquivos rodando em computadores conectados à internet, sem depender só do seu aparelho.",
     },
     {
       termo: "Codar",
       def: "Gíria para programar. É o ato de escrever código para criar um software, site ou aplicativo.",
     },
     {
-      termo: "ZIP",
-      def: "Um formato de arquivo que compacta vários arquivos em um único pacote para facilitar o armazenamento ou envio.",
+      termo: "Deploy",
+      def: "O processo de colocar um site, atualização ou aplicativo no ar para que outras pessoas possam usar.",
     },
-  ];
+    {
+      termo: "Framework",
+      def: "Um conjunto de ferramentas prontas que acelera o trabalho de criação de softwares.",
+    },
+    {
+      termo: "Front-end",
+      def: "A parte visual e interativa de um site ou app, como telas, botões, textos, animações e cores.",
+    },
+    {
+      termo: "Git",
+      def: "Uma ferramenta que registra o histórico de alterações no código e ajuda equipes a trabalharem juntas.",
+    },
+    {
+      termo: "Hardware",
+      def: "A parte física da tecnologia, como teclado, monitor, placa-mãe, processador e memória.",
+    },
+    {
+      termo: "IP",
+      def: "Um número de identificação usado por dispositivos quando eles se conectam a uma rede ou à internet.",
+    },
+    {
+      termo: "Open Source",
+      def: "Software de código aberto, com código público para qualquer pessoa estudar, modificar ou melhorar.",
+    },
+    {
+      termo: "Software",
+      def: "A parte lógica da tecnologia: programas, aplicativos, sistemas e instruções que rodam nos dispositivos.",
+    },
+    {
+      termo: "UI",
+      def: "Interface do usuário. É o que a pessoa enxerga e usa na tela: layout, botões, tipografia e componentes.",
+    },
+    {
+      termo: "UX",
+      def: "Experiência do usuário. É como a pessoa se sente ao usar um produto: se foi simples, fluido e útil.",
+    },
+    {
+      termo: "ZIP",
+      def: "Formato de arquivo que compacta vários itens em um único pacote para facilitar armazenamento ou envio.",
+    },
+  ].sort((a, b) => a.termo.localeCompare(b.termo));
 
-  // Ordena o dicionário de A a Z por padrão
-  dicionario.sort((a, b) => a.termo.localeCompare(b.termo));
-
-  // Elementos do DOM
   let gridResultados;
   let inputBusca;
   let btnLimparBusca;
   let containerAlfabeto;
   let msgSemResultado;
-
-  // Estado atual
   let filtroAtual = "";
   let letraAtual = "";
 
-  // FUNÇÕES DE RENDERIZAÇÃO
   function renderizarGrid(dados) {
     gridResultados.innerHTML = "";
 
@@ -100,87 +91,60 @@ const GlossarioApp = (function () {
     gridResultados.style.display = "grid";
 
     dados.forEach((item) => {
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "brutal-card glossario-card";
-
       card.innerHTML = `
-                <h3>${item.termo}</h3>
-                <p>${item.def}</p>
-            `;
+        <h3>${item.termo}</h3>
+        <p>${item.def}</p>
+      `;
       gridResultados.appendChild(card);
     });
   }
 
-  function renderizarAlfabeto() {
-    const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-    // Botão para mostrar todos
-    const btnTodos = document.createElement("button");
-    btnTodos.className = "btn-letra active";
-    btnTodos.textContent = "Tudo";
-    btnTodos.style.width = "auto";
-    btnTodos.style.padding = "0 15px";
-    btnTodos.addEventListener("click", () => aplicarFiltroLetra(""));
-    containerAlfabeto.appendChild(btnTodos);
-
-    // Botões de A a Z
-    alfabeto.forEach((letra) => {
-      const btn = document.createElement("button");
-      btn.className = "btn-letra";
-      btn.textContent = letra;
-      btn.addEventListener("click", () => aplicarFiltroLetra(letra));
-      containerAlfabeto.appendChild(btn);
+  function atualizarBotoes() {
+    const botoes = containerAlfabeto.querySelectorAll(".btn-letra");
+    botoes.forEach((botao) => {
+      const ativo = botao.dataset.letra === letraAtual;
+      botao.classList.toggle("active", ativo);
     });
   }
 
-  // FUNÇÕES DE FILTRAGEM E LÓGICA
   function processarFiltros() {
-    let dadosFiltrados = dicionario;
-
-    // Filtra pela caixa de pesquisa (nome do termo ou definição)
-    if (filtroAtual) {
-      const termoBusca = filtroAtual.toLowerCase();
-      dadosFiltrados = dadosFiltrados.filter(
-        (item) => item.termo.toLowerCase().includes(termoBusca) || item.def.toLowerCase().includes(termoBusca),
-      );
-    }
-
-    // Filtra pela letra selecionada (apenas inicial da palavra)
-    if (letraAtual) {
-      dadosFiltrados = dadosFiltrados.filter((item) => item.termo.toUpperCase().startsWith(letraAtual));
-    }
+    const termoBusca = filtroAtual.toLowerCase();
+    const dadosFiltrados = dicionario.filter((item) => {
+      const combinaBusca =
+        !termoBusca || item.termo.toLowerCase().includes(termoBusca) || item.def.toLowerCase().includes(termoBusca);
+      const combinaLetra = !letraAtual || item.termo.toUpperCase().startsWith(letraAtual);
+      return combinaBusca && combinaLetra;
+    });
 
     renderizarGrid(dadosFiltrados);
   }
 
   function aplicarFiltroLetra(letra) {
     letraAtual = letra;
-
-    // Atualiza interface dos botões
-    const botoes = containerAlfabeto.querySelectorAll(".btn-letra");
-    botoes.forEach((b) => b.classList.remove("active"));
-
-    if (letra === "") {
-      botoes[0].classList.add("active"); // Botão "Tudo"
-    } else {
-      // Acha o botão da letra exata
-      const btnAlvo = Array.from(botoes).find((b) => b.textContent === letra);
-      if (btnAlvo) btnAlvo.classList.add("active");
-    }
-
+    atualizarBotoes();
     processarFiltros();
+  }
+
+  function renderizarAlfabeto() {
+    const letras = ["", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+    letras.forEach((letra) => {
+      const btn = document.createElement("button");
+      btn.className = `btn-letra ${letra === "" ? "active" : ""}`;
+      btn.dataset.letra = letra;
+      btn.textContent = letra || "Tudo";
+      btn.style.width = letra ? "" : "auto";
+      btn.style.padding = letra ? "" : "0 15px";
+      btn.addEventListener("click", () => aplicarFiltroLetra(letra));
+      containerAlfabeto.appendChild(btn);
+    });
   }
 
   function aplicarFiltroBusca(evento) {
     filtroAtual = evento.target.value.trim();
-
-    // Controla o botão "X" de limpar
-    if (filtroAtual.length > 0) {
-      btnLimparBusca.style.display = "block";
-    } else {
-      btnLimparBusca.style.display = "none";
-    }
-
+    btnLimparBusca.style.display = filtroAtual ? "block" : "none";
     processarFiltros();
   }
 
@@ -191,33 +155,22 @@ const GlossarioApp = (function () {
     processarFiltros();
   }
 
-  // INICIALIZAÇÃO E EVENTOS
   function init() {
-    // Captura os elementos DOM
     gridResultados = document.getElementById("glossarioGrid");
     inputBusca = document.getElementById("searchInput");
     btnLimparBusca = document.getElementById("clearSearchBtn");
     containerAlfabeto = document.getElementById("alfabetoContainer");
     msgSemResultado = document.getElementById("noResultsMessage");
 
-    if (!gridResultados) return; // Segurança caso o script seja rodado em outra página
+    if (!gridResultados) return;
 
-    // Monta os botões iniciais
     renderizarAlfabeto();
-
-    // Listeners de evento
     inputBusca.addEventListener("input", aplicarFiltroBusca);
     btnLimparBusca.addEventListener("click", limparBusca);
-
-    // Renderiza tudo na primeira carga
     renderizarGrid(dicionario);
   }
 
-  // Retorna apenas o que for público para o app
-  return {
-    iniciar: init,
-  };
+  return { iniciar: init };
 })();
 
-// Dispara o script quando o HTML estiver 100% carregado
 document.addEventListener("DOMContentLoaded", GlossarioApp.iniciar);

@@ -1,164 +1,142 @@
-/* --- SECÇÃO HERO --- */
 .hero-section {
-  background-color: var(--cor-azul-principal);
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
   position: relative;
-  overflow: hidden; /* Corta a imagem se ela sair muito do ecrã */
-  padding: 120px var(--padding-lateral) 60px var(--padding-lateral);
+  display: flex;
+  width: 100%;
+  min-height: 100svh;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(120px, 16vh, 170px) var(--padding-lateral) clamp(56px, 8vw, 90px);
+  background-color: var(--cor-azul-principal);
 }
 
 .hero-container {
-  display: flex;
+  position: relative;
+  display: grid;
+  min-height: 560px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
   align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative; /* Crucial para o posicionamento da imagem */
+  gap: clamp(28px, 4vw, 56px);
 }
 
-/* --- LADO DIREITO --- */
-.hero-image {
-  position: absolute;
-  /*ponto de ajuste: Aqui é ruim de calibrar*/
-  right: -5%; /* Encosta a imagem à direita (ajuste este valor para a puxar mais para fora ou para dentro) */
-  top: -250px; /* PUXA A IMAGEM PARA CIMA, PARA TRÁS DO MENU!*/
-
-  width: 65%;
-  max-width: 900px;
-
+.hero-content {
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 780px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
 
-  z-index: 1; /* Nível 1: Fica atrás do texto e atrás do menu */
+.hero-content h1 {
+  color: var(--cor-texto-claro);
+  font-size: clamp(2.3rem, 6vw, 4.75rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  max-width: 680px;
+  color: var(--cor-texto-claro);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 650;
+  line-height: 1.65;
+  text-transform: uppercase;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
 
 .hero-image img {
-  width: 100%;
+  width: min(100%, 760px);
   height: auto;
   animation: float 6s ease-in-out infinite;
 }
 
-/* --- LADO ESQUERDO --- */
-.hero-content {
-  width: 100%;
-  max-width: 800px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-
-  z-index: 2;
-  position: relative; /* Necessário para o z-index funcionar */
-
-  /* Adiciona um leve sombreado ao texto para garantir leitura caso sobreponha a imagem 3D */
-  text-shadow: 0px 4px 15px rgba(27, 115, 242, 0.5);
-}
-
-.hero-content h1 {
-  font-size: 4rem; /* Título ligeiramente maior */
-  color: var(--cor-texto-claro);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1px;
-}
-
-.hero-content p {
-  font-size: 1.1rem; /* Texto também maior */
-  color: var(--cor-texto-claro);
-  line-height: 1.6;
-  font-weight: 600;
-  text-transform: uppercase;
-  max-width: 90%; /* Deixa o parágrafo respirar dentro do contentor de 800px */
-}
-
-/* --- BOTÃO VERMELHO --- */
 .btn-red {
-  display: inline-block;
+  display: inline-flex;
+  width: fit-content;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
   background-color: var(--cor-vermelho-botao);
   color: var(--cor-texto-claro);
-  padding: 16px 45px;
-  border-radius: 50px;
+  padding: 14px 34px;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   font-weight: 900;
-  font-size: 1.1rem;
   text-transform: uppercase;
-  width: fit-content;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
-  margin-top: 15px;
-
-  /* Tira o sombreado do texto para o botão */
   text-shadow: none;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .btn-red:hover {
-  transform: translateY(-4px);
   background-color: #e53935;
+  transform: translateY(-4px);
 }
 
-/* --- ANIMAÇÃO DE FLUTUAR --- */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-18px);
   }
 }
 
-/* --- RESPONSIVIDADE (Tablets) --- */
-@media (max-width: 1024px) {
-  .hero-container {
-    justify-content: center;
-  }
-
-  .hero-content {
-    text-align: center;
-    align-items: center;
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  /* No tablet, a imagem fica como "marca de água" gigante atrás do texto centrado */
-  .hero-image {
-    width: 90%;
-    right: 5%;
-    top: 10%;
-    opacity: 0.3; /* Transparente para deixar ler o texto */
-  }
-}
-
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .hero-section {
-    padding-top: 130px;
-    padding-bottom: 40px;
     min-height: auto;
   }
 
-  .hero-content h1 {
-    font-size: 2.2rem;
+  .hero-container {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .hero-content p {
-    font-size: 0.95rem;
+  .hero-content {
+    align-items: center;
+    margin: 0 auto;
   }
 
   .hero-image {
+    order: -1;
+  }
+
+  .hero-image img {
+    width: min(88vw, 520px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 112px;
+  }
+
+  .hero-content {
+    gap: 18px;
+  }
+
+  .hero-content p {
+    text-transform: none;
+  }
+
+  .btn-red {
     width: 100%;
-    right: 0;
-    top: 20%;
-    opacity: 0.2; /* Ainda mais transparente no telemóvel */
+    max-width: 320px;
   }
 }

@@ -1,101 +1,96 @@
-/* == Módulo Carreiras == */
 const CarreirasApp = (function () {
-  // Dicionário de Carreiras
+  const iconBase = "./src/img/";
   const carreiras = [
     {
       nome: "Desenvolvedor Front-end",
-      desc: "Responsável por criar interfaces visuais e interativas de sites e aplicações, utilizando HTML, CSS, JavaScript e frameworks modernos.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721301.png",
+      desc: "Cria interfaces visuais e interativas de sites e aplicações, usando HTML, CSS, JavaScript e frameworks modernos.",
+      icone: `${iconBase}geometry-link-1.png`,
       cat: "Desenvolvimento",
     },
     {
       nome: "Desenvolvedor Back-end",
-      desc: "Cuida da lógica, banco de dados e regras de negócio por trás das aplicações, garantindo que tudo funcione corretamente no servidor.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721304.png",
+      desc: "Cuida da lógica, banco de dados e regras de negócio por trás das aplicações, garantindo que tudo funcione no servidor.",
+      icone: `${iconBase}geometry-link-2.png`,
       cat: "Desenvolvimento",
     },
     {
       nome: "Desenvolvedor Full Stack",
-      desc: "Atua tanto no front-end quanto no back-end, desenvolvendo aplicações completas e integrando todas as camadas do sistema.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721311.png",
+      desc: "Atua no front-end e no back-end, desenvolvendo aplicações completas e integrando as camadas do sistema.",
+      icone: `${iconBase}geomety-link-3.png`,
       cat: "Desenvolvimento",
     },
     {
       nome: "Engenheiro de Dados",
-      desc: "Especialista em projetar, construir e manter sistemas de coleta, armazenamento e processamento de grandes volumes de dados.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721297.png",
+      desc: "Projeta, constrói e mantém sistemas de coleta, armazenamento e processamento de grandes volumes de dados.",
+      icone: `${iconBase}icon-card-1.png`,
       cat: "Dados",
     },
     {
       nome: "Cientista de Dados",
-      desc: "Analisa dados complexos para extrair insights e apoiar decisões, utilizando estatística, programação e inteligência artificial.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721300.png",
+      desc: "Analisa dados complexos para extrair insights e apoiar decisões com estatística, programação e inteligência artificial.",
+      icone: `${iconBase}icon-card-2.png`,
       cat: "Dados",
     },
     {
       nome: "Analista de Dados",
-      desc: "Transforma dados em informações úteis para o negócio, criando relatórios, dashboards e análises para apoiar estratégias.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721300.png",
+      desc: "Transforma dados em informações úteis para o negócio, criando relatórios, dashboards e análises estratégicas.",
+      icone: `${iconBase}banner-icons.png`,
       cat: "Dados",
     },
     {
       nome: "DevOps Engineer",
-      desc: "Integra desenvolvimento e operações, automatizando processos de deploy, monitoramento e infraestrutura para maior agilidade.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721298.png",
+      desc: "Integra desenvolvimento e operações, automatizando deploy, monitoramento e infraestrutura para ganhar agilidade.",
+      icone: `${iconBase}geometry-link-2.png`,
       cat: "Infra & Segurança",
     },
     {
       nome: "Administrador de Banco de Dados",
-      desc: "Gerencia bancos de dados (DBA), garantindo segurança, desempenho, integridade e disponibilidade das informações.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721309.png",
+      desc: "Gerencia bancos de dados, garantindo segurança, desempenho, integridade e disponibilidade das informações.",
+      icone: `${iconBase}icon-card-1.png`,
       cat: "Infra & Segurança",
     },
     {
       nome: "Segurança da Informação",
-      desc: "Protege sistemas e dados contra ameaças, implementando políticas, ferramentas e práticas de segurança digital (Cybersecurity).",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721310.png",
+      desc: "Protege sistemas e dados contra ameaças por meio de políticas, ferramentas e práticas de segurança digital.",
+      icone: `${iconBase}geomety-link-3.png`,
       cat: "Infra & Segurança",
     },
     {
-      nome: "Product Manager (PM)",
-      desc: "Responsável por planejar, priorizar e guiar o desenvolvimento de produtos digitais, alinhando as necessidades do usuário e negócio.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721306.png",
+      nome: "Product Manager",
+      desc: "Planeja e prioriza produtos digitais, alinhando necessidades do usuário, objetivos do negócio e viabilidade técnica.",
+      icone: `${iconBase}icon-card-2.png`,
       cat: "Produto & Design",
     },
     {
       nome: "UX/UI Designer",
-      desc: "Foca na experiência e na interface do usuário, criando soluções visuais intuitivas, acessíveis e agradáveis para produtos digitais.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721307.png",
+      desc: "Cria experiências e interfaces intuitivas, acessíveis e agradáveis para produtos digitais.",
+      icone: `${iconBase}geometry-link-1.png`,
       cat: "Produto & Design",
     },
     {
       nome: "QA/Testador de Software",
-      desc: "Garante a qualidade dos sistemas, planejando e executando testes para identificar e corrigir falhas antes da entrega.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721308.png",
+      desc: "Garante a qualidade dos sistemas, planejando e executando testes para encontrar falhas antes da entrega.",
+      icone: `${iconBase}banner-icons.png`,
       cat: "Desenvolvimento",
     },
     {
       nome: "Analista de Suporte Técnico",
-      desc: "Atende usuários e resolve problemas técnicos, garantindo o funcionamento adequado de sistemas, redes e equipamentos.",
-      icone: "https://cdn-icons-png.flaticon.com/512/2721/2721302.png",
+      desc: "Atende usuários e resolve problemas técnicos, mantendo sistemas, redes e equipamentos funcionando bem.",
+      icone: `${iconBase}geometry-link-2.png`,
       cat: "Infra & Segurança",
     },
   ];
 
-  // As categorias baseadas nos objetos acima
   const categorias = ["Todos", "Desenvolvimento", "Dados", "Infra & Segurança", "Produto & Design"];
 
-  // Elementos DOM
   let gridCarreiras;
   let containerCategorias;
   let inputBusca;
   let btnLimparBusca;
   let msgSemResultado;
-
   let filtroAtual = "";
   let categoriaAtual = "Todos";
 
-  // 2. RENDERIZAÇÃO
   function renderizarGrid(dados) {
     gridCarreiras.innerHTML = "";
 
@@ -109,69 +104,52 @@ const CarreirasApp = (function () {
     gridCarreiras.style.display = "grid";
 
     dados.forEach((item) => {
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "brutal-card carreira-card";
       card.innerHTML = `
-                <img src="${item.icone}" alt="${item.nome}" class="carreira-icon">
-                <h3>${item.nome}</h3>
-                <p>${item.desc}</p>
-                <span class="categoria-tag">${item.cat}</span>
-            `;
+        <img src="${item.icone}" alt="" class="carreira-icon">
+        <h3>${item.nome}</h3>
+        <p>${item.desc}</p>
+        <span class="categoria-tag">${item.cat}</span>
+      `;
       gridCarreiras.appendChild(card);
     });
   }
 
-  function renderizarCategorias() {
-    categorias.forEach((cat) => {
-      const btn = document.createElement("button");
-
-      btn.className = "btn-letra " + (cat === "Todos" ? "active" : "");
-      btn.textContent = cat;
-      btn.style.width = "auto";
-      btn.style.padding = "0 15px";
-
-      btn.addEventListener("click", () => aplicarFiltroCategoria(cat, btn));
-      containerCategorias.appendChild(btn);
-    });
-  }
-
-  // FUNÇÕES DE FILTRAGEM E LÓGICA
   function processarFiltros() {
-    let dadosFiltrados = carreiras;
-
-    // 1. Filtro por Categoria
-    if (categoriaAtual !== "Todos") {
-      dadosFiltrados = dadosFiltrados.filter((item) => item.cat === categoriaAtual);
-    }
-
-    // 2. Filtro por Texto (Barra de Pesquisa)
-    if (filtroAtual) {
-      const termoBusca = filtroAtual.toLowerCase();
-      dadosFiltrados = dadosFiltrados.filter(
-        (item) => item.nome.toLowerCase().includes(termoBusca) || item.desc.toLowerCase().includes(termoBusca),
-      );
-    }
+    const termoBusca = filtroAtual.toLowerCase();
+    const dadosFiltrados = carreiras.filter((item) => {
+      const combinaCategoria = categoriaAtual === "Todos" || item.cat === categoriaAtual;
+      const combinaBusca =
+        !termoBusca || item.nome.toLowerCase().includes(termoBusca) || item.desc.toLowerCase().includes(termoBusca);
+      return combinaCategoria && combinaBusca;
+    });
 
     renderizarGrid(dadosFiltrados);
   }
 
   function aplicarFiltroCategoria(cat, btnElement) {
     categoriaAtual = cat;
-
-    // Atualiza a interface dos botões
-    const botoes = containerCategorias.querySelectorAll(".btn-letra");
-    botoes.forEach((b) => b.classList.remove("active"));
+    containerCategorias.querySelectorAll(".btn-letra").forEach((btn) => btn.classList.remove("active"));
     btnElement.classList.add("active");
-
     processarFiltros();
+  }
+
+  function renderizarCategorias() {
+    categorias.forEach((cat) => {
+      const btn = document.createElement("button");
+      btn.className = `btn-letra ${cat === "Todos" ? "active" : ""}`;
+      btn.textContent = cat;
+      btn.style.width = "auto";
+      btn.style.padding = "0 15px";
+      btn.addEventListener("click", () => aplicarFiltroCategoria(cat, btn));
+      containerCategorias.appendChild(btn);
+    });
   }
 
   function aplicarFiltroBusca(evento) {
     filtroAtual = evento.target.value.trim();
-
-    // Controla o botão "X" de limpar
-    btnLimparBusca.style.display = filtroAtual.length > 0 ? "block" : "none";
-
+    btnLimparBusca.style.display = filtroAtual ? "block" : "none";
     processarFiltros();
   }
 
@@ -182,7 +160,6 @@ const CarreirasApp = (function () {
     processarFiltros();
   }
 
-  // INICIALIZAÇÃO E EVENTOS
   function init() {
     gridCarreiras = document.getElementById("carreirasGrid");
     containerCategorias = document.getElementById("categoriasContainer");
@@ -190,15 +167,11 @@ const CarreirasApp = (function () {
     btnLimparBusca = document.getElementById("clearSearchBtn");
     msgSemResultado = document.getElementById("noResultsMessage");
 
-    if (!gridCarreiras) return; // Segurança
+    if (!gridCarreiras) return;
 
     renderizarCategorias();
-
-    // Listeners da busca
     inputBusca.addEventListener("input", aplicarFiltroBusca);
     btnLimparBusca.addEventListener("click", limparBusca);
-
-    // Renderização inicial
     renderizarGrid(carreiras);
   }
 

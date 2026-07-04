@@ -1,12 +1,11 @@
-/* --- HERO GLOSSÁRIO --- */
 .glossario-hero {
-  background-color: var(--cor-arghata); /* Cor roxa da paleta */
-  padding: 150px var(--padding-lateral) 60px var(--padding-lateral);
   position: relative;
   overflow: hidden;
+  padding: clamp(124px, 16vh, 165px) var(--padding-lateral) clamp(54px, 8vw, 76px);
+  background-color: var(--cor-arghata);
   background-image: url("../icons/icon-box.png");
   background-repeat: no-repeat;
-  background-position: right -60px bottom -40px;
+  background-position: right -70px bottom -45px;
 }
 
 .hero-glossario-container {
@@ -17,18 +16,18 @@
 }
 
 .glossario-header-text {
-  flex: 1;
-  max-width: 700px;
+  max-width: 760px;
 }
 
 .glossario-header-text h1 {
-  font-size: 3.5rem;
-  color: var(--cor-texto-claro);
-  font-weight: 900;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin-bottom: 20px;
-  text-shadow: 4px 4px 0px #000000;
+  color: var(--cor-texto-claro);
+  font-size: clamp(2.35rem, 6vw, 3.7rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-shadow: 4px 4px 0 var(--cor-borda);
+  text-transform: uppercase;
 }
 
 .text-highlight {
@@ -36,119 +35,109 @@
 }
 
 .glossario-header-text p {
-  font-size: 1.2rem;
+  max-width: 760px;
   color: var(--cor-texto-claro);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-.glossario-hero-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  animation: float 6s ease-in-out infinite;
-}
-
-.glossario-hero-img img {
-  max-width: 250px;
-  height: auto;
-}
-
-/* --- BARRA DE PESQUISA --- */
 .glossario-filtros {
-  padding: 60px var(--padding-lateral) 30px var(--padding-lateral);
+  padding: clamp(44px, 7vw, 64px) var(--padding-lateral) 30px;
   background-color: var(--cor-fundo-claro);
 }
 
 .brutal-card-flat {
-  background-color: #ffffff;
-  border: 3px solid #000000;
-  box-shadow: 8px 8px 0px 0px #000000;
-  border-radius: 15px;
-  padding: 15px 25px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
   margin-bottom: 30px;
+  border: 3px solid var(--cor-borda);
+  border-radius: 15px;
+  background-color: var(--cor-fundo-claro);
+  box-shadow: 8px 8px 0 var(--cor-borda);
+  padding: 15px clamp(16px, 3vw, 25px);
 }
 
 .search-box-container i {
-  font-size: 1.5rem;
+  flex: 0 0 auto;
   color: var(--cor-texto-escuro);
+  font-size: 1.25rem;
 }
 
 .search-box-container input {
+  min-width: 0;
   flex: 1;
-  border: none;
-  outline: none;
-  font-size: 1.2rem;
-  font-family: var(--font-main);
-  color: var(--cor-texto-escuro);
-  font-weight: 600;
+  border: 0;
+  outline: 0;
   background: transparent;
+  color: var(--cor-texto-escuro);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 600;
 }
 
 .search-box-container input::placeholder {
-  color: #888;
+  color: #777777;
   font-weight: 500;
 }
 
 .btn-limpar {
+  flex: 0 0 auto;
+  border: 0;
   background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
   color: var(--cor-vermelho-botao);
+  cursor: pointer;
+  font-size: 1.35rem;
 }
 
-/* --- FILTRO POR ALFABETO --- */
 .alfabeto-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
 }
 
 .btn-letra {
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  box-shadow: 3px 3px 0px 0px #000000;
+  min-width: 40px;
+  min-height: 40px;
+  border: 2px solid var(--cor-borda);
   border-radius: 8px;
-  width: 40px;
-  height: 40px;
-  font-weight: 900;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  background-color: var(--cor-fundo-claro);
   color: var(--cor-texto-escuro);
+  box-shadow: 3px 3px 0 var(--cor-borda);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 900;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .btn-letra:hover,
 .btn-letra.active {
   background-color: var(--cor-laranja-principal);
-  transform: translateY(-2px) translateX(-2px);
-  box-shadow: 5px 5px 0px 0px #000000;
+  box-shadow: 5px 5px 0 var(--cor-borda);
+  transform: translate(-2px, -2px);
 }
 
-/* --- RESULTADOS --- */
 .glossario-resultados {
-  padding: 0 var(--padding-lateral) 80px var(--padding-lateral);
-  background-color: var(--cor-fundo-claro);
   min-height: 40vh;
+  padding: 0 var(--padding-lateral) clamp(72px, 9vw, 96px);
+  background-color: var(--cor-fundo-claro);
 }
 
 .glossario-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 30px;
 }
 
 .glossario-card {
-  background-color: #eef2f6;
-  border: 2px solid #000000;
-  box-shadow: 8px 8px 0px 0px #000000;
-  border-radius: 15px;
-  padding: 25px;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  background-color: var(--cor-card-suave);
   transition: transform 0.2s ease;
 }
 
@@ -157,49 +146,54 @@
 }
 
 .glossario-card h3 {
-  font-size: 1.6rem;
-  font-weight: 900;
+  width: 100%;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--cor-borda);
   color: var(--cor-azul-principal);
-  margin-bottom: 10px;
-  border-bottom: 2px solid #000000;
-  padding-bottom: 5px;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+  padding-bottom: 6px;
 }
 
 .glossario-card p {
-  font-size: 1.05rem;
-  line-height: 1.5;
   color: var(--cor-texto-escuro);
+  font-size: 1.02rem;
   font-weight: 500;
+  line-height: 1.55;
 }
 
 .no-results {
-  text-align: center;
-  padding: 40px;
-  border: 3px dashed #000000;
+  border: 3px dashed var(--cor-borda);
   border-radius: 15px;
   background-color: #fff9f9;
+  padding: clamp(28px, 5vw, 40px);
+  text-align: center;
 }
 
 .no-results h3 {
-  font-size: 1.8rem;
-  color: var(--cor-vermelho-botao);
   margin-bottom: 10px;
+  color: var(--cor-vermelho-botao);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .hero-glossario-container {
-    flex-direction: column;
     text-align: center;
   }
-  .glossario-header-text h1 {
-    font-size: 2.5rem;
+
+  .glossario-hero {
+    background-size: 170px;
   }
-  .glossario-hero-img img {
-    max-width: 150px;
+
+  .brutal-card-flat {
+    align-items: stretch;
+    gap: 10px;
+    box-shadow: 6px 6px 0 var(--cor-borda);
   }
+
   .btn-letra {
-    width: 35px;
-    height: 35px;
+    min-width: 36px;
+    min-height: 36px;
   }
 }
