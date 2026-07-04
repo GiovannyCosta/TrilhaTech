@@ -187,13 +187,29 @@
   font-weight: 800;
 }
 
+.arghata-credit {
+  --arghata-logo-width: clamp(118px, 14vw, 150px);
+  --arghata-logo-height: clamp(78px, 9vw, 104px);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arghata-credit span {
+  color: var(--cor-texto-escuro);
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
 .arghata-logo {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: clamp(118px, 14vw, 150px);
-  height: clamp(78px, 9vw, 104px);
+  width: var(--arghata-logo-width);
+  height: var(--arghata-logo-height);
   overflow: visible;
   background: transparent;
 }
@@ -233,5 +249,10 @@
     flex-direction: column;
     text-align: center;
     box-shadow: 6px 6px 0 var(--cor-borda);
+  }
+
+  .arghata-credit {
+    flex-direction: column;
+    gap: 4px;
   }
 }
