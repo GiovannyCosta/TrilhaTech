@@ -2,70 +2,87 @@ const GlossarioApp = (function () {
   const dicionario = [
     {
       termo: "API",
+      tipo: "Integração",
       def: "Uma ponte que permite que dois sistemas, aplicativos ou sites conversem e troquem dados entre si.",
     },
     {
       termo: "Algoritmo",
+      tipo: "Lógica",
       def: "Uma sequência de instruções para resolver um problema, como uma receita que o computador consegue seguir.",
     },
     {
       termo: "Back-end",
+      tipo: "Camada",
       def: "A parte de bastidores de um site ou aplicativo, onde ficam servidores, bancos de dados e regras do sistema.",
     },
     {
       termo: "Bug",
+      tipo: "Erro",
       def: "Um erro no código que faz um programa se comportar de forma inesperada ou parar de funcionar.",
     },
     {
       termo: "Cloud",
+      tipo: "Infra",
       def: "A nuvem: serviços e arquivos rodando em computadores conectados à internet, sem depender só do seu aparelho.",
     },
     {
       termo: "Codar",
+      tipo: "Gíria",
       def: "Gíria para programar. É o ato de escrever código para criar um software, site ou aplicativo.",
     },
     {
       termo: "Deploy",
+      tipo: "Publicação",
       def: "O processo de colocar um site, atualização ou aplicativo no ar para que outras pessoas possam usar.",
     },
     {
       termo: "Framework",
+      tipo: "Ferramenta",
       def: "Um conjunto de ferramentas prontas que acelera o trabalho de criação de softwares.",
     },
     {
       termo: "Front-end",
+      tipo: "Interface",
       def: "A parte visual e interativa de um site ou app, como telas, botões, textos, animações e cores.",
     },
     {
       termo: "Git",
+      tipo: "Versão",
       def: "Uma ferramenta que registra o histórico de alterações no código e ajuda equipes a trabalharem juntas.",
     },
     {
       termo: "Hardware",
+      tipo: "Eletrônico",
       def: "A parte física da tecnologia, como teclado, monitor, placa-mãe, processador e memória.",
     },
     {
       termo: "IP",
+      tipo: "Rede",
       def: "Um número de identificação usado por dispositivos quando eles se conectam a uma rede ou à internet.",
     },
     {
       termo: "Open Source",
+      tipo: "Licença",
       def: "Software de código aberto, com código público para qualquer pessoa estudar, modificar ou melhorar.",
     },
     {
       termo: "Software",
+      tipo: "Eletrônico",
       def: "A parte lógica da tecnologia: programas, aplicativos, sistemas e instruções que rodam nos dispositivos.",
     },
     {
       termo: "UI",
+      tipo: "Interface",
       def: "Interface do usuário. É o que a pessoa enxerga e usa na tela: layout, botões, tipografia e componentes.",
     },
     {
       termo: "UX",
+      tipo: "Experiência",
       def: "Experiência do usuário. É como a pessoa se sente ao usar um produto: se foi simples, fluido e útil.",
     },
     {
       termo: "ZIP",
+      tipo: "Arquivo",
       def: "Formato de arquivo que compacta vários itens em um único pacote para facilitar armazenamento ou envio.",
     },
   ].sort((a, b) => a.termo.localeCompare(b.termo));
@@ -104,10 +121,10 @@ const GlossarioApp = (function () {
           <circle cx="198" cy="102" r="50" fill="${tema.orbC}" opacity="0.52"></circle>
           <rect x="22" y="50" width="64" height="64" fill="#111111"></rect>
           <text x="54" y="91" text-anchor="middle" fill="${tema.base}" font-size="25" font-weight="900" font-family="Poppins, Arial">${inicial}</text>
-          <g transform="translate(214 18)">
-            <rect width="82" height="24" fill="#00de72" stroke="#111111" stroke-width="4"></rect>
+          <g transform="translate(196 18)">
+            <rect width="104" height="24" fill="#00de72" stroke="#111111" stroke-width="4"></rect>
             <circle cx="15" cy="12" r="3.5" fill="#111111"></circle>
-            <text x="46" y="16" text-anchor="middle" fill="#111111" font-size="10" font-weight="900" font-family="Poppins, Arial">TECH</text>
+            <text x="59" y="16" text-anchor="middle" fill="#111111" font-size="9" font-weight="900" font-family="Poppins, Arial">${item.tipo}</text>
           </g>
         </svg>
       </div>
@@ -132,7 +149,7 @@ const GlossarioApp = (function () {
       card.innerHTML = `
         ${obterSvgCard(item, index)}
         <div class="glossario-card-body">
-          <span class="glossario-card-kicker">termo tech</span>
+          <span class="glossario-card-kicker">${item.tipo}</span>
           <h3>${item.termo}</h3>
           <p>${item.def}</p>
         </div>
