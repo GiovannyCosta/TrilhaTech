@@ -189,7 +189,7 @@
 
 .arghata-credit {
   --arghata-logo-width: clamp(118px, 14vw, 150px);
-  --arghata-logo-height: clamp(78px, 9vw, 104px);
+  --arghata-logo-height: clamp(78px, 90vw, 104px);
 
   display: inline-flex;
   align-items: center;
