@@ -12,6 +12,9 @@ const TrilhaTechUI = (function () {
     { page: "carreiras", label: "Carreiras", href: "./carreiras.html" },
     { page: "sobre", label: "Sobre", href: "./sobre.html" },
   ];
+  const loaderSessionKey = "trilhaTechLoaderShown";
+  const minLoaderMs = 2200;
+  const loaderFadeMs = 650;
 
   function getCurrentPage() {
     return document.body.dataset.page || "home";
@@ -26,17 +29,34 @@ const TrilhaTechUI = (function () {
 
   function shouldShowLoading() {
     try {
-      if (sessionStorage.getItem("trilhaTechLoaderShown") === "true") return false;
-      sessionStorage.setItem("trilhaTechLoaderShown", "true");
+      const navigation = performance.getEntriesByType("navigation")[0];
+      const isReload = navigation ? navigation.type === "reload" : performance.navigation?.type === 1;
+
+      if (!isReload && sessionStorage.getItem(loaderSessionKey) === "true") return false;
+      sessionStorage.setItem(loaderSessionKey, "true");
       return true;
     } catch (error) {
       return true;
     }
   }
 
-  function renderLoading() {
-    if (!shouldShowLoading()) return;
+  function unlockApp() {
+    document.body.classList.add("app-ready");
+  }
 
+  function waitForPageLoad(callback) {
+    if (document.readyState === "complete") {
+      callback();
+      return;
+    }
+
+    window.addEventListener("load", callback, { once: true });
+  }
+
+  function renderLoading() {
+    if (!shouldShowLoading()) return false;
+
+    const startedAt = performance.now();
     const loader = document.createElement("div");
     loader.className = "page-loader";
     loader.setAttribute("aria-label", "Carregando Trilha Tech");
@@ -69,10 +89,18 @@ const TrilhaTechUI = (function () {
     `;
     document.body.prepend(loader);
 
-    window.addEventListener("load", () => {
-      window.setTimeout(() => loader.classList.add("is-hidden"), 4100);
-      window.setTimeout(() => loader.remove(), 4750);
+    waitForPageLoad(() => {
+      const elapsed = performance.now() - startedAt;
+      const releaseDelay = Math.max(minLoaderMs - elapsed, 0);
+
+      window.setTimeout(() => {
+        unlockApp();
+        loader.classList.add("is-hidden");
+        window.setTimeout(() => loader.remove(), loaderFadeMs);
+      }, releaseDelay);
     });
+
+    return true;
   }
 
   function renderHeader() {
@@ -193,11 +221,13 @@ const TrilhaTechUI = (function () {
 
   function init() {
     if (!document.querySelector(".app-container")) return;
-    renderLoading();
+    const isLoading = renderLoading();
     renderHeader();
     renderTopButton();
     renderFooter();
     document.body.dataset.pageLabel = pages[getCurrentPage()] || pages.home;
+
+    if (!isLoading) unlockApp();
   }
 
   return { init };

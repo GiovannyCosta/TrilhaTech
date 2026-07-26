@@ -58,6 +58,14 @@ input {
 .app-container {
   min-height: 100vh;
   overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.app-ready .app-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease;
 }
 
 .forma-3d {
