@@ -68,7 +68,8 @@
 
 .forma-3d {
   position: absolute;
-  z-index: 5;
+  z-index: 0;
+  opacity: 0.9;
   pointer-events: none;
   animation: float-shapes 6s ease-in-out infinite;
 }
@@ -134,7 +135,14 @@
     box-shadow: 8px 8px 0 var(--cor-borda);
   }
 
-  .forma-3d {
-    display: none !important;
+  .pr-forma-1,
+  .pr-forma-5 {
+    opacity: 0.14;
+  }
+
+  .pr-forma-2,
+  .pr-forma-3,
+  .pr-forma-4 {
+    opacity: 0.18;
   }
 }

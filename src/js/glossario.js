@@ -70,6 +70,13 @@ const GlossarioApp = (function () {
     },
   ].sort((a, b) => a.termo.localeCompare(b.termo));
 
+  const cardThemes = [
+    { base: "#fff238", accent: "#111111", orbA: "#20d1c9", orbB: "#ff473a", orbC: "#f48c06" },
+    { base: "#20d1c9", accent: "#111111", orbA: "#fff238", orbB: "#8a2be2", orbC: "#ff473a" },
+    { base: "#ff473a", accent: "#111111", orbA: "#f48c06", orbB: "#2385c4", orbC: "#fff238" },
+    { base: "#f48c06", accent: "#111111", orbA: "#8a2be2", orbB: "#20d1c9", orbC: "#fff238" },
+  ];
+
   let gridResultados;
   let inputBusca;
   let btnLimparBusca;
@@ -77,6 +84,35 @@ const GlossarioApp = (function () {
   let msgSemResultado;
   let filtroAtual = "";
   let letraAtual = "";
+
+  function obterSvgCard(item, index) {
+    const tema = cardThemes[index % cardThemes.length];
+    const inicial = item.termo.slice(0, 2).toUpperCase();
+
+    return `
+      <div class="glossario-card-visual" style="--card-base:${tema.base}; --card-accent:${tema.accent};">
+        <svg viewBox="0 0 320 132" role="img" aria-label="Marcador visual de ${item.termo}">
+          <defs>
+            <pattern id="glossario-lines-${index}" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+              <rect width="12" height="12" fill="${tema.base}"></rect>
+              <path d="M0 0H2V12H0z" fill="#000000" opacity="0.1"></path>
+            </pattern>
+          </defs>
+          <rect width="320" height="132" fill="url(#glossario-lines-${index})"></rect>
+          <circle cx="238" cy="64" r="58" fill="${tema.orbA}" opacity="0.55"></circle>
+          <circle cx="284" cy="94" r="56" fill="${tema.orbB}" opacity="0.58"></circle>
+          <circle cx="198" cy="102" r="50" fill="${tema.orbC}" opacity="0.52"></circle>
+          <rect x="22" y="50" width="64" height="64" fill="#111111"></rect>
+          <text x="54" y="91" text-anchor="middle" fill="${tema.base}" font-size="25" font-weight="900" font-family="Poppins, Arial">${inicial}</text>
+          <g transform="translate(214 18)">
+            <rect width="82" height="24" fill="#00de72" stroke="#111111" stroke-width="4"></rect>
+            <circle cx="15" cy="12" r="3.5" fill="#111111"></circle>
+            <text x="46" y="16" text-anchor="middle" fill="#111111" font-size="10" font-weight="900" font-family="Poppins, Arial">TECH</text>
+          </g>
+        </svg>
+      </div>
+    `;
+  }
 
   function renderizarGrid(dados) {
     gridResultados.innerHTML = "";
@@ -90,12 +126,16 @@ const GlossarioApp = (function () {
     msgSemResultado.style.display = "none";
     gridResultados.style.display = "grid";
 
-    dados.forEach((item) => {
+    dados.forEach((item, index) => {
       const card = document.createElement("article");
       card.className = "brutal-card glossario-card";
       card.innerHTML = `
-        <h3>${item.termo}</h3>
-        <p>${item.def}</p>
+        ${obterSvgCard(item, index)}
+        <div class="glossario-card-body">
+          <span class="glossario-card-kicker">termo tech</span>
+          <h3>${item.termo}</h3>
+          <p>${item.def}</p>
+        </div>
       `;
       gridResultados.appendChild(card);
     });

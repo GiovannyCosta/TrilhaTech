@@ -60,6 +60,14 @@ input {
   overflow-x: hidden;
 }
 
+.forma-3d {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: float-shapes 6s ease-in-out infinite;
+}
+
 .page-loader {
   position: fixed;
   inset: 0;
@@ -280,6 +288,16 @@ input {
   }
 }
 
+@keyframes float-shapes {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -290,7 +308,24 @@ input {
   }
 }
 
+@media (max-width: 1200px) {
+  .forma-3d {
+    opacity: 0.55;
+  }
+}
+
+@media (max-width: 900px) {
+  .forma-3d {
+    opacity: 0.32;
+  }
+}
+
 @media (max-width: 640px) {
+  .forma-3d {
+    opacity: 0.18;
+    transform: scale(0.65) !important;
+  }
+
   #topBtn {
     right: 16px;
     bottom: 16px;

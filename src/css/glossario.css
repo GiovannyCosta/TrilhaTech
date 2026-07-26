@@ -137,7 +137,9 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
-  background-color: var(--cor-card-suave);
+  overflow: hidden;
+  background-color: #f7f7f2;
+  padding: 0;
   transition: transform 0.2s ease;
 }
 
@@ -145,15 +147,59 @@
   transform: translateY(-5px);
 }
 
+.glossario-card-visual {
+  height: 132px;
+  overflow: hidden;
+  border-bottom: 3px solid var(--cor-borda);
+  background: var(--card-base);
+}
+
+.glossario-card-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.glossario-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 24px 26px;
+}
+
+.glossario-card-kicker {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  color: #626262;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.glossario-card-kicker::before {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 0;
+  width: 5px;
+  background: var(--cor-vermelho-botao);
+  content: "";
+}
+
 .glossario-card h3 {
   width: 100%;
-  margin-bottom: 12px;
-  border-bottom: 2px solid var(--cor-borda);
-  color: var(--cor-azul-principal);
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  margin-bottom: 10px;
+  border-bottom: 0;
+  color: var(--cor-texto-escuro);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 900;
+  letter-spacing: 0;
   overflow-wrap: anywhere;
-  padding-bottom: 6px;
+  padding-bottom: 0;
+  text-transform: uppercase;
 }
 
 .glossario-card p {
@@ -195,5 +241,13 @@
   .btn-letra {
     min-width: 36px;
     min-height: 36px;
+  }
+
+  .glossario-card-visual {
+    height: 112px;
+  }
+
+  .glossario-card-body {
+    padding: 20px;
   }
 }
