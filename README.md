@@ -1,53 +1,93 @@
-## problemática
+<p align="center">
+  <img src="./src/img/readme/trilhatech-banner.png" alt="TrilhaTech — seu primeiro mapa para a área de TI" width="100%">
+</p>
 
-boa parte dos jovens não sabem exatamente sobre as areas de TI, pensam que é somente um Técnico que conserta computadores, não sabem como um programa, sistema e outras processos são feitos, não conhecem as diversas áreas que uma pessoa pode trilhar.
+<p align="center">
+  <strong>Um guia acessível para conhecer carreiras, traduzir termos técnicos e organizar o primeiro passo em tecnologia.</strong>
+</p>
 
-## solução
+<p align="center">
+  <a href="https://github.com/GiovannyCosta/TrilhaTech"><strong>Repositório</strong></a>
+</p>
 
-É realmente bom quando temos por onde começar sem saber nada, onde procurar informações sobre algo que é novidade. Então criar um projeto que guie de forma simples o usuario dentro do eccossistema de TI com roadmaps e trilhas bem estruturadas é o que buscamos no projeto.
+<p align="center">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E">
+  <img alt="Responsivo" src="https://img.shields.io/badge/layout-responsivo-2ba99a?style=flat-square">
+</p>
 
-## Quem é o usuário?
+## Sobre
 
-nosso projeto é voltado principalmente para jovens que desejam iniciar nas areas de TI, aos que não sabem nada de programação ou que já sabem algo, não é um requisito, pois nosso projeto vai açém da aréa de programação.
+O **TrilhaTech** é um portal educacional para pessoas que querem entrar na área de Tecnologia da Informação, mas ainda não conhecem todas as possibilidades.
 
-### Requisitos Funcionais (RF) - O que o software faz
+Muita gente associa TI apenas à programação, manutenção de computadores ou à imagem estereotipada de um hacker. O projeto apresenta desenvolvimento, qualidade de software, cibersegurança, dados, design, infraestrutura, suporte, produto e projetos em linguagem acessível.
 
-- RF01 - Consultar Carreiras: O sistema deve permitir que o usuário busque e visualize detalhes sobre diferentes áreas de TI (backend, frontend, suporte, etc.). (Era: "permitir a busca de areas" e "mostrar guia completo")
+O objetivo não é escolher uma profissão pelo usuário. É oferecer vocabulário e contexto suficientes para que essa escolha seja mais consciente.
 
-- RF02 - Glossário Técnico: O sistema deve exibir um dicionário de termos técnicos (acervo) com explicações simples. (Era: "ter acervo de palavras tech")
+## Principais áreas
 
-- RF03 - Gerenciar Perfil: O sistema deve permitir que o usuário crie uma conta, faça login e edite seus dados. (Era: "ter perfil único" e "poder mudar perfil") : REMOVIDO
+- **Comece aqui:** diagnóstico curto baseado em interesses.
+- **Carreiras:** catálogo pesquisável com rotina, perfil e primeiro passo.
+- **Glossário:** termos técnicos explicados sem complicação.
+- **Roadmaps:** curadoria de mapas de estudo da comunidade [roadmap.sh](https://roadmap.sh/).
+- **Sobre:** problema, solução, princípios e equipe responsável.
 
-- RF04 - Sistema de Progresso (Gamificação): O sistema deve registrar quais módulos o usuário já leu e atribuir pontuação/conquistas. (Era: "ter gamificação") : NÃO INCLUIDO
+## Recursos
 
-- RF05 - Conteúdo Educativo: O sistema deve apresentar textos explicativos diferenciando Hardware de Software e desmistificando a área. (Era: "mostrar claramente a diferença...")
+- Busca por carreira, termo, categoria e descrição.
+- Filtros dinâmicos gerados a partir do conteúdo.
+- Diagnóstico interativo de perfil.
+- Doze carreiras apresentadas sem limitar TI à programação.
+- Mais de trinta termos técnicos traduzidos.
+- Curadoria de roadmaps por área.
+- Header, footer, loading e navegação modularizados.
+- Menu responsivo e link para pular ao conteúdo.
+- Suporte à preferência de redução de movimento.
+- Identidade visual inspirada em cadernos, fichas e materiais escolares.
 
-### Requisitos Não-Funcionais (RNF) - Qualidade e Restrições
+## Páginas
 
-- RNF01 - Usabilidade: A interface deve seguir padrões minimalistas e intuitivos para público leigo. (Era: "design simples")
-
-- RNF02 - Linguagem: Todo o conteúdo textual deve ser escrito em português acessível, evitando jargões técnicos sem explicação. (Era: "linguagem... não pode ser técnica demais")
-
-- RNF03 - Portabilidade: O sistema deve ser responsivo, adaptando-se a telas de computadores, tablets e smartphones. (Era: "responsividade")
-
-- RNF04 - Desempenho: As páginas devem carregar em no máximo 3 segundos em conexões 4G padrão. (Era: "rapidez" - aqui definimos uma métrica!)
-
+```text
+index.html           Visão geral do projeto
+comece-aqui.html     Diagnóstico e comparação de perfis
+carreiras.html       Catálogo de profissões em TI
+glossario.html       Dicionário técnico pesquisável
+roadmaps.html        Curadoria de mapas de estudo
+sobre.html           Propósito, processo e equipe
 ```
-trilha-tech/
-│
-├── index.html          (Página Inicial - Onde tudo começa)
-├── carreiras.html      (O Guia de Profissões)
-├── glossario.html      (O Dicionário Tech)
-├── fundamentos.html    (A explicação Hardware vs Software)
-│
-├── css/                (Pasta para o estilo/design)
-│   └── style.css
-│
-├── img/                (Pasta para as imagens)
-│   ├── logo.png
-│   └── banner.jpg
-│
-└── js/                 (Pasta para a interatividade)
-    └── script.js
 
+## Executando localmente
+
+```bash
+git clone https://github.com/GiovannyCosta/TrilhaTech.git
+cd TrilhaTech
 ```
+
+Abra `index.html` no navegador. O projeto utiliza HTML, CSS e JavaScript puros e não exige build.
+
+## Estrutura
+
+```text
+src/
+  css/site.css       Sistema visual e responsividade
+  js/site.js         Header, footer, loading e menu
+  js/data.js         Carreiras e glossário
+  js/directory.js    Busca, filtros e renderização
+  js/quiz.js         Diagnóstico inicial
+  img/               Imagens e banner
+```
+
+## Créditos
+
+O TrilhaTech foi idealizado e desenvolvido por:
+
+- **Giovanny Costa | Arghata** — desenvolvimento, design e experiência.
+- **Nelson Lobato** — desenvolvimento, pesquisa e organização técnica.
+- **Eduardo Maia** — planejamento, pesquisa e definição do problema.
+
+Os mapas de estudo externos são disponibilizados pela comunidade [roadmap.sh](https://roadmap.sh/).
+
+<p align="center">
+  Desenvolvido com cadernos, caminhos e conhecimento por <strong>Giovanny Costa | Arghata, Nelson Lobato e Eduardo Maia</strong>.
+</p>

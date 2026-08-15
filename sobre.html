@@ -1,140 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./src/css/root.css">
-    <link rel="stylesheet" href="./src/css/header.css">
-    <link rel="stylesheet" href="./src/css/glossario.css">
-    <link rel="stylesheet" href="./src/css/footer.css">
-    <link rel="stylesheet" href="./src/css/pratica.css">
-    <link rel="stylesheet" href="./src/css/sobre.css">
-    <title>Sobre Nós | Trilha Tech</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Conheça o propósito e a equipe do TrilhaTech.">
+    <link rel="icon" href="./src/icons/favicon.ico">
+    <link rel="stylesheet" href="./src/css/site.css">
+    <title>Sobre o projeto | TrilhaTech</title>
 </head>
 
 <body data-page="sobre">
-    <div class="app-container">
-        <main>
-            <section class="glossario-hero">
-                <div class="container hero-glossario-container">
-                    <div class="glossario-header-text">
-                        <h1>Quem somos</h1>
-                        <p>Um grupo de estudantes de tecnologia que acredita no poder do conhecimento para abrir
-                            caminhos.</p>
-                    </div>
+    <div data-site-header></div>
+    <main id="conteudo">
+        <section class="page-hero" style="--hero-bg:#ffd9d1">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Por que o TrilhaTech existe?</p>
+                    <h1>Antes de escolher uma carreira, você merece <span class="marker">entender as opções.</span></h1>
+                    <p class="hero-copy">O TrilhaTech nasceu para reduzir a distância entre a curiosidade por tecnologia
+                        e o primeiro passo consciente na área.</p>
                 </div>
-            </section>
-
-            <section class="pratica-section sobre-projeto-section">
-                <img src="./src/icons/icon-line.png" alt="" class="forma-3d pr-forma-1">
-                <img src="./src/icons/icon-book.png" alt="" class="forma-3d pr-forma-5">
-
-                <div class="container">
-                    <h2 class="section-title sobre-title">Sobre o projeto</h2>
-
-                    <div class="pratica-grid-bottom">
-                        <div class="brutal-card card-large">
-                            <p>O TrilhaTech nasceu da iniciativa de estudantes de Análise e Desenvolvimento de Sistemas
-                                que desejam aproximar jovens do universo da tecnologia.</p>
-                            <p>Percebemos que muita gente tem interesse pela área, mas não sabe por onde começar. Por
-                                isso, criamos um espaço com carreiras, linguagens e ferramentas digitais explicadas de
-                                forma simples e acessível.</p>
-                            <img src="./src/icons/icon-half.png" alt="" class="forma-3d pr-forma-2">
-                        </div>
-
-                        <div class="brutal-card card-small card-small-wd">
-                            <h3>TrilhaTech</h3>
-                            <p>Nosso objetivo é ajudar jovens a entender melhor o mundo da tecnologia e descobrir
-                                caminhos possíveis dentro desse universo.</p>
-                            <img src="./src/icons/icon-half-circle.png" alt="" class="forma-3d pr-forma-4">
-                            <img src="./src/icons/icon-triangle.png" alt="" class="forma-3d pr-forma-3">
-                        </div>
-                    </div>
+                <aside class="hero-note">
+                    <h2>Nossa promessa</h2>
+                    <p>Explicar sem infantilizar, orientar sem impor um único caminho e mostrar que TI é muito maior do
+                        que programação ou manutenção de computadores.</p>
+                </aside>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>O problema que queremos resolver.</h2>
+                    <p>Muita gente entra em um curso sem conhecer a rotina das profissões ou desiste por acreditar que
+                        tecnologia não combina com seu perfil.</p>
                 </div>
-            </section>
-
-            <section class="equipe-section">
-                <div class="container">
-                    <h2 class="section-title sobre-title-equipe">Quem constrói o projeto</h2>
-
-                    <div class="team-intro-container">
-                        <div class="brutal-card card-full">
-                            <p>O projeto é desenvolvido por estudantes que aplicam na prática conhecimentos de
-                                programação, design, pesquisa e desenvolvimento web.</p>
-                        </div>
-                    </div>
-
-                    <div class="team-profiles-grid">
-                        <article class="team-card-profile">
-                            <div class="profile-header">
-                                <img src="./src/public/icon-perfil-1.png" alt="Foto de Giovanny Costa"
-                                    class="profile-img">
-                                <h3 class="profile-name">Giovanny Costa</h3>
-                                <p class="profile-role">Fullstack Dev & Designer</p>
-                            </div>
-
-                            <div class="profile-stack-area">
-                                <span class="stack-label">Stack</span>
-                                <div class="stack-badges">
-                                    <span class="badge-tech">HTML</span>
-                                    <span class="badge-tech">CSS</span>
-                                    <span class="badge-tech">JS</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="team-card-profile">
-                            <div class="profile-header">
-                                <img src="./src/public/icon-perfil-2.png" alt="Foto de Nelson Lobato"
-                                    class="profile-img">
-                                <h3 class="profile-name">Nelson Lobato</h3>
-                                <p class="profile-role">Fullstack Dev</p>
-                            </div>
-
-                            <div class="profile-stack-area">
-                                <span class="stack-label">Stack</span>
-                                <div class="stack-badges">
-                                    <span class="badge-tech">React</span>
-                                    <span class="badge-tech">HTML</span>
-                                    <span class="badge-tech">CSS</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="team-card-profile">
-                            <div class="profile-header">
-                                <img src="./src/public/icon-perfil-3.png" alt="Foto de Eduardo Maia"
-                                    class="profile-img">
-                                <h3 class="profile-name">Eduardo Maia</h3>
-                                <p class="profile-role">Planejamento & Desenvolvimento</p>
-                            </div>
-
-                            <div class="profile-stack-area">
-                                <span class="stack-label">Stack</span>
-                                <div class="stack-badges">
-                                    <span class="badge-tech">Python</span>
-                                    <span class="badge-tech">HTML</span>
-                                    <span class="badge-tech">CSS</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                <div class="about-manifesto">
+                    <article class="manifesto-card">
+                        <p class="eyebrow">O ponto de partida</p>
+                        <h2>“Quero trabalhar com TI, mas não sei com o quê.”</h2>
+                        <p>Programador, especialista em segurança, QA, designer, analista de dados, suporte, produto:
+                            todas são portas legítimas.</p>
+                    </article>
+                    <article class="manifesto-card">
+                        <p class="eyebrow">Nossa solução</p>
+                        <h2>Um mapa, não uma receita.</h2>
+                        <p>Organizamos carreiras, conceitos e roadmaps para que cada pessoa compare possibilidades,
+                            aprenda o vocabulário e tome uma decisão melhor informada.</p>
+                    </article>
                 </div>
-            </section>
-        </main>
-    </div>
-
-    <script defer src="./src/js/app.js"></script>
-    <script defer src="./src/js/scrollbar.js"></script>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Como construímos o conteúdo.</h2>
+                    <p>O projeto combina pesquisa, linguagem acessível e revisão constante.</p>
+                </div>
+                <div class="card-grid steps">
+                    <article class="school-card number-card">
+                        <h3>Escutamos dúvidas</h3>
+                        <p>Partimos das perguntas reais de quem ainda não conhece o ecossistema de TI.</p>
+                    </article>
+                    <article class="school-card number-card">
+                        <h3>Traduzimos conceitos</h3>
+                        <p>Explicamos termos técnicos com exemplos simples e sem perder precisão.</p>
+                    </article>
+                    <article class="school-card number-card">
+                        <h3>Apontamos caminhos</h3>
+                        <p>Conectamos cada carreira a uma sequência de estudo no roadmap.sh.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Quem constrói o TrilhaTech.</h2>
+                    <p>Um projeto acadêmico criado por estudantes que também precisaram encontrar seu lugar em
+                        tecnologia.</p>
+                </div>
+                <div class="team-grid">
+                    <a class="school-card team-card" href="https://www.instagram.com/gio.env/" target="_blank"
+                        rel="noreferrer" style="--team-accent:#00bcd4" aria-label="Instagram de Giovanny Costa">
+                        <span class="instagram-label">Instagram ↗</span>
+                        <img src="./src/public/icon-perfil-1.png" alt="Giovanny Costa">
+                        <h3>Giovanny Costa</h3>
+                        <p class="team-role">Fullstack Dev &amp; Designer</p>
+                        <p class="team-copy">Estrutura, experiência visual, conteúdo e implementação web.</p>
+                        <div class="team-stack"><strong>Stack</strong><div><span>HTML</span><span>CSS</span><span>JS</span></div></div>
+                    </a>
+                    <a class="school-card team-card" href="https://www.instagram.com/nelsonn.dev/" target="_blank"
+                        rel="noreferrer" style="--team-accent:#f48c06" aria-label="Instagram de Nelson Lobato">
+                        <span class="instagram-label">Instagram ↗</span>
+                        <img src="./src/public/icon-perfil-2.png" alt="Nelson Lobato">
+                        <h3>Nelson Lobato</h3>
+                        <p class="team-role">Fullstack Dev</p>
+                        <p class="team-copy">Pesquisa técnica, organização de conteúdo e implementação.</p>
+                        <div class="team-stack"><strong>Stack</strong><div><span>React</span><span>HTML</span><span>CSS</span></div></div>
+                    </a>
+                    <a class="school-card team-card" href="https://www.instagram.com/eduardo_maaia/" target="_blank"
+                        rel="noreferrer" style="--team-accent:#ef6a9a" aria-label="Instagram de Eduardo Maia">
+                        <span class="instagram-label">Instagram ↗</span>
+                        <img src="./src/public/icon-perfil-3.png" alt="Eduardo Maia">
+                        <h3>Eduardo Maia</h3>
+                        <p class="team-role">Planejamento &amp; Desenvolvimento</p>
+                        <p class="team-copy">Definição do problema, levantamento de necessidades e conteúdo.</p>
+                        <div class="team-stack"><strong>Stack</strong><div><span>Python</span><span>HTML</span><span>CSS</span></div></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="./src/js/site.js"></script>
 </body>
 
 </html>

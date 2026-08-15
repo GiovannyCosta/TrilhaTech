@@ -1,0 +1,9 @@
+{
+  "name": "trilhatech",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/js/site.js && node --check src/js/data.js && node --check src/js/directory.js && node --check src/js/quiz.js && node --test"
+  }
+}
